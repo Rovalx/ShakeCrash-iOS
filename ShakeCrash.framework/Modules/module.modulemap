@@ -1,0 +1,10 @@
+framework module ShakeCrash {
+  umbrella header "ShakeCrash.h"
+
+  export *
+  module * { export * }
+}
+
+module ShakeCrash.Swift {
+    header "ShakeCrash-Swift.h"
+}
