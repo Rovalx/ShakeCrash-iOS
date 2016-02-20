@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2937C0BC1C78D45800EE46CF /* WelcomeCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0BA1C78D45800EE46CF /* WelcomeCrashViewController.swift */; };
-		2937C0BD1C78D45800EE46CF /* WelcomeCrashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2937C0BB1C78D45800EE46CF /* WelcomeCrashViewController.xib */; };
-		2937C0C21C78D5B900EE46CF /* shake.png in Resources */ = {isa = PBXBuildFile; fileRef = 2937C0C11C78D5B900EE46CF /* shake.png */; };
-		294271A81C78A326004DC598 /* RedmineFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271A21C78A326004DC598 /* RedmineFeedbackReporter.swift */; };
+		2937C1051C79015100EE46CF /* shake.png in Resources */ = {isa = PBXBuildFile; fileRef = 2937C0F41C79015100EE46CF /* shake.png */; };
+		2937C1061C79015100EE46CF /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0F61C79015100EE46CF /* Swiftly.swift */; };
+		2937C1071C79015100EE46CF /* FeedbackReportDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0F81C79015100EE46CF /* FeedbackReportDelegate.swift */; };
+		2937C1081C79015100EE46CF /* MailFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0F91C79015100EE46CF /* MailFeedbackReporter.swift */; };
+		2937C1091C79015100EE46CF /* RedmineFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0FA1C79015100EE46CF /* RedmineFeedbackReporter.swift */; };
+		2937C10A1C79015100EE46CF /* FeedabackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0FC1C79015100EE46CF /* FeedabackViewController.swift */; };
+		2937C10B1C79015100EE46CF /* FeedabackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2937C0FD1C79015100EE46CF /* FeedabackViewController.xib */; };
+		2937C10C1C79015100EE46CF /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0FE1C79015100EE46CF /* ViewControllerExtensions.swift */; };
+		2937C10D1C79015100EE46CF /* WelcomeCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C0FF1C79015100EE46CF /* WelcomeCrashViewController.swift */; };
+		2937C10E1C79015100EE46CF /* WelcomeCrashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2937C1001C79015100EE46CF /* WelcomeCrashViewController.xib */; };
+		2937C10F1C79015100EE46CF /* DrawableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C1021C79015100EE46CF /* DrawableImage.swift */; };
+		2937C1101C79015100EE46CF /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C1031C79015100EE46CF /* PlaceholderTextView.swift */; };
+		2937C1111C79015100EE46CF /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2937C1041C79015100EE46CF /* ViewExtensions.swift */; };
 		294271A91C78A326004DC598 /* ShakeCrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271A31C78A326004DC598 /* ShakeCrash.swift */; };
-		294271AA1C78A326004DC598 /* MailFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271A41C78A326004DC598 /* MailFeedbackReporter.swift */; };
-		294271AB1C78A326004DC598 /* FeedbackReportDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271A51C78A326004DC598 /* FeedbackReportDelegate.swift */; };
-		294271AC1C78A326004DC598 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271A61C78A326004DC598 /* ViewExtensions.swift */; };
-		294271AD1C78A326004DC598 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271A71C78A326004DC598 /* PlaceholderTextView.swift */; };
-		294271B01C78A37F004DC598 /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271AF1C78A37F004DC598 /* Swiftly.swift */; };
-		294271B31C78A480004DC598 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294271B21C78A480004DC598 /* ViewControllerExtensions.swift */; };
 		2950315A1C77135E00D0E7FD /* ShakeCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 295031591C77135E00D0E7FD /* ShakeCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		295031661C77140000D0E7FD /* FeedabackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295031631C77140000D0E7FD /* FeedabackViewController.swift */; };
-		295031671C77140000D0E7FD /* FeedabackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295031641C77140000D0E7FD /* FeedabackViewController.xib */; };
-		295031681C77140000D0E7FD /* DrawableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295031651C77140000D0E7FD /* DrawableImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2937C0BA1C78D45800EE46CF /* WelcomeCrashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCrashViewController.swift; sourceTree = "<group>"; };
-		2937C0BB1C78D45800EE46CF /* WelcomeCrashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeCrashViewController.xib; sourceTree = "<group>"; };
-		2937C0C11C78D5B900EE46CF /* shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shake.png; sourceTree = "<group>"; };
-		294271A21C78A326004DC598 /* RedmineFeedbackReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmineFeedbackReporter.swift; sourceTree = "<group>"; };
+		2937C0F41C79015100EE46CF /* shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shake.png; sourceTree = "<group>"; };
+		2937C0F61C79015100EE46CF /* Swiftly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftly.swift; sourceTree = "<group>"; };
+		2937C0F81C79015100EE46CF /* FeedbackReportDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackReportDelegate.swift; sourceTree = "<group>"; };
+		2937C0F91C79015100EE46CF /* MailFeedbackReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailFeedbackReporter.swift; sourceTree = "<group>"; };
+		2937C0FA1C79015100EE46CF /* RedmineFeedbackReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmineFeedbackReporter.swift; sourceTree = "<group>"; };
+		2937C0FC1C79015100EE46CF /* FeedabackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedabackViewController.swift; sourceTree = "<group>"; };
+		2937C0FD1C79015100EE46CF /* FeedabackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedabackViewController.xib; sourceTree = "<group>"; };
+		2937C0FE1C79015100EE46CF /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		2937C0FF1C79015100EE46CF /* WelcomeCrashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCrashViewController.swift; sourceTree = "<group>"; };
+		2937C1001C79015100EE46CF /* WelcomeCrashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeCrashViewController.xib; sourceTree = "<group>"; };
+		2937C1021C79015100EE46CF /* DrawableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableImage.swift; sourceTree = "<group>"; };
+		2937C1031C79015100EE46CF /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		2937C1041C79015100EE46CF /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		294271A31C78A326004DC598 /* ShakeCrash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeCrash.swift; sourceTree = "<group>"; };
-		294271A41C78A326004DC598 /* MailFeedbackReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailFeedbackReporter.swift; sourceTree = "<group>"; };
-		294271A51C78A326004DC598 /* FeedbackReportDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackReportDelegate.swift; sourceTree = "<group>"; };
-		294271A61C78A326004DC598 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
-		294271A71C78A326004DC598 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
-		294271AF1C78A37F004DC598 /* Swiftly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftly.swift; sourceTree = "<group>"; };
-		294271B21C78A480004DC598 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		295031561C77135E00D0E7FD /* ShakeCrash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShakeCrash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		295031591C77135E00D0E7FD /* ShakeCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShakeCrash.h; sourceTree = "<group>"; };
 		2950315B1C77135E00D0E7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		295031631C77140000D0E7FD /* FeedabackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedabackViewController.swift; sourceTree = "<group>"; };
-		295031641C77140000D0E7FD /* FeedabackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedabackViewController.xib; sourceTree = "<group>"; };
-		295031651C77140000D0E7FD /* DrawableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,52 +55,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2937C0BE1C78D57000EE46CF /* Images */ = {
+		2937C0F31C79015100EE46CF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2937C0C11C78D5B900EE46CF /* shake.png */,
+				2937C0F41C79015100EE46CF /* shake.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
-		294271961C786DCA004DC598 /* Views */ = {
+		2937C0F51C79015100EE46CF /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				294271A71C78A326004DC598 /* PlaceholderTextView.swift */,
-				294271A61C78A326004DC598 /* ViewExtensions.swift */,
-				295031651C77140000D0E7FD /* DrawableImage.swift */,
+				2937C0F61C79015100EE46CF /* Swiftly.swift */,
 			);
-			name = Views;
+			path = Libraries;
 			sourceTree = "<group>";
 		};
-		294271971C786DD4004DC598 /* ViewControllers */ = {
+		2937C0F71C79015100EE46CF /* Reporters */ = {
 			isa = PBXGroup;
 			children = (
-				294271B21C78A480004DC598 /* ViewControllerExtensions.swift */,
-				295031631C77140000D0E7FD /* FeedabackViewController.swift */,
-				295031641C77140000D0E7FD /* FeedabackViewController.xib */,
-				2937C0BA1C78D45800EE46CF /* WelcomeCrashViewController.swift */,
-				2937C0BB1C78D45800EE46CF /* WelcomeCrashViewController.xib */,
+				2937C0F81C79015100EE46CF /* FeedbackReportDelegate.swift */,
+				2937C0F91C79015100EE46CF /* MailFeedbackReporter.swift */,
+				2937C0FA1C79015100EE46CF /* RedmineFeedbackReporter.swift */,
 			);
-			name = ViewControllers;
+			path = Reporters;
 			sourceTree = "<group>";
 		};
-		294271AE1C78A354004DC598 /* Reporters */ = {
+		2937C0FB1C79015100EE46CF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				294271A21C78A326004DC598 /* RedmineFeedbackReporter.swift */,
-				294271A41C78A326004DC598 /* MailFeedbackReporter.swift */,
-				294271A51C78A326004DC598 /* FeedbackReportDelegate.swift */,
+				2937C0FC1C79015100EE46CF /* FeedabackViewController.swift */,
+				2937C0FD1C79015100EE46CF /* FeedabackViewController.xib */,
+				2937C0FE1C79015100EE46CF /* ViewControllerExtensions.swift */,
+				2937C0FF1C79015100EE46CF /* WelcomeCrashViewController.swift */,
+				2937C1001C79015100EE46CF /* WelcomeCrashViewController.xib */,
 			);
-			name = Reporters;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		294271B11C78A382004DC598 /* Libraries */ = {
+		2937C1011C79015100EE46CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				294271AF1C78A37F004DC598 /* Swiftly.swift */,
+				2937C1021C79015100EE46CF /* DrawableImage.swift */,
+				2937C1031C79015100EE46CF /* PlaceholderTextView.swift */,
+				2937C1041C79015100EE46CF /* ViewExtensions.swift */,
 			);
-			name = Libraries;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2950314C1C77135E00D0E7FD = {
@@ -122,11 +122,11 @@
 		295031581C77135E00D0E7FD /* ShakeCrash */ = {
 			isa = PBXGroup;
 			children = (
-				2937C0BE1C78D57000EE46CF /* Images */,
-				294271B11C78A382004DC598 /* Libraries */,
-				294271AE1C78A354004DC598 /* Reporters */,
-				294271971C786DD4004DC598 /* ViewControllers */,
-				294271961C786DCA004DC598 /* Views */,
+				2937C0F31C79015100EE46CF /* Images */,
+				2937C0F51C79015100EE46CF /* Libraries */,
+				2937C0F71C79015100EE46CF /* Reporters */,
+				2937C0FB1C79015100EE46CF /* ViewControllers */,
+				2937C1011C79015100EE46CF /* Views */,
 				294271A31C78A326004DC598 /* ShakeCrash.swift */,
 				295031591C77135E00D0E7FD /* ShakeCrash.h */,
 				2950315B1C77135E00D0E7FD /* Info.plist */,
@@ -202,9 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				295031671C77140000D0E7FD /* FeedabackViewController.xib in Resources */,
-				2937C0C21C78D5B900EE46CF /* shake.png in Resources */,
-				2937C0BD1C78D45800EE46CF /* WelcomeCrashViewController.xib in Resources */,
+				2937C1051C79015100EE46CF /* shake.png in Resources */,
+				2937C10E1C79015100EE46CF /* WelcomeCrashViewController.xib in Resources */,
+				2937C10B1C79015100EE46CF /* FeedabackViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,17 +215,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				294271A81C78A326004DC598 /* RedmineFeedbackReporter.swift in Sources */,
-				294271AC1C78A326004DC598 /* ViewExtensions.swift in Sources */,
-				2937C0BC1C78D45800EE46CF /* WelcomeCrashViewController.swift in Sources */,
-				294271AD1C78A326004DC598 /* PlaceholderTextView.swift in Sources */,
-				294271B01C78A37F004DC598 /* Swiftly.swift in Sources */,
-				295031681C77140000D0E7FD /* DrawableImage.swift in Sources */,
+				2937C1111C79015100EE46CF /* ViewExtensions.swift in Sources */,
+				2937C1081C79015100EE46CF /* MailFeedbackReporter.swift in Sources */,
+				2937C1061C79015100EE46CF /* Swiftly.swift in Sources */,
+				2937C1091C79015100EE46CF /* RedmineFeedbackReporter.swift in Sources */,
+				2937C1071C79015100EE46CF /* FeedbackReportDelegate.swift in Sources */,
+				2937C10F1C79015100EE46CF /* DrawableImage.swift in Sources */,
 				294271A91C78A326004DC598 /* ShakeCrash.swift in Sources */,
-				294271AA1C78A326004DC598 /* MailFeedbackReporter.swift in Sources */,
-				294271AB1C78A326004DC598 /* FeedbackReportDelegate.swift in Sources */,
-				294271B31C78A480004DC598 /* ViewControllerExtensions.swift in Sources */,
-				295031661C77140000D0E7FD /* FeedabackViewController.swift in Sources */,
+				2937C10A1C79015100EE46CF /* FeedabackViewController.swift in Sources */,
+				2937C10D1C79015100EE46CF /* WelcomeCrashViewController.swift in Sources */,
+				2937C10C1C79015100EE46CF /* ViewControllerExtensions.swift in Sources */,
+				2937C1101C79015100EE46CF /* PlaceholderTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
