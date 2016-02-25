@@ -69,7 +69,8 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 				request.HTTPBody = json
 			} catch {
 				print("Redmine Reporter: crashed while creating parameters")
-				self.showErrorMessage(viewController.presentedViewController)
+				self.showErrorMessage(viewController.presentedViewController,
+					message: "Can't understand issue response")
 				return
 			}
 
@@ -78,14 +79,16 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 
 				guard error == nil && data != nil else {
 					print("Redmine Reporter: error = \(error) ")
-					self.showErrorMessage(viewController.presentedViewController)
+					self.showErrorMessage(viewController.presentedViewController,
+						message: "Error while sending issue")
 					return
 				}
 
 				if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 201 {
 					print("Redmine Reporter: statusCode should be 200, but is \(httpStatus.statusCode) ")
 					print("Redmine Reporter: response = \(response) ")
-					self.showErrorMessage(viewController.presentedViewController)
+					self.showErrorMessage(viewController.presentedViewController,
+						message: "Issue couldn't be added")
 				}
 
 				// Hide network indicator on success
@@ -113,14 +116,16 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 
 				guard error == nil && data != nil else {
 					print("Redmine Reporter: error = \(error) ")
-					self.showErrorMessage(viewController.presentedViewController)
+					self.showErrorMessage(viewController.presentedViewController,
+						message: "Error while sending attachment")
 					return
 				}
 
 				if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 201 {
 					print("Redmine Reporter: statusCode should be 200, but is \(httpStatus.statusCode) ")
 					print("Redmine Reporter: response = \(response) ")
-					self.showErrorMessage(viewController.presentedViewController)
+					self.showErrorMessage(viewController.presentedViewController,
+						message: "Attachment couldn't be added")
 				}
 
 				do {
@@ -132,38 +137,44 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 							self.sendIssueToRedmine(viewController, description: description, userName: userName, token: token)
 						} else {
 							print("Redmine Reporter: no photo token in response")
-							self.showErrorMessage(viewController.presentedViewController)
+							self.showErrorMessage(viewController.presentedViewController,
+								message: "No photo attachment in response")
 						}
 					} else {
 						print("Redmine Reporter: no photo data in response")
-						self.showErrorMessage(viewController.presentedViewController)
+						self.showErrorMessage(viewController.presentedViewController,
+							message: "No data in attachment response")
 					}
 				} catch {
 					print("Redmine Reporter: crashed while deserializing")
-					self.showErrorMessage(viewController.presentedViewController)
+					self.showErrorMessage(viewController.presentedViewController,
+						message: "Can't understand attachment response")
 				}
 			}
 			task.resume()
 	}
 
-	private func showErrorMessage(viewController: UIViewController?) {
-		self.showAlertWithTitle("Error", message: "Report couldn't be send", viewController: viewController)
+	private func showErrorMessage(viewController: UIViewController?, message: String) {
+		dispatch_async(dispatch_get_main_queue()) { () -> Void in
+			self.showAlertWithTitle("Issue couldn't be send", message: message, viewController: viewController)
+		}
 	}
 
 	private func showAlertWithTitle(title: String, message: String, viewController: UIViewController?) {
+
+		UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+
 		if let viewController = viewController {
 
 			// Hide network indicator on error and activate button
-			if let feedbacVC = viewController.presentedViewController
-			as? FeedabackViewController {
+			if let feedbacVC = viewController as? FeedabackViewController {
 				feedbacVC.sendButton.active = true
 			}
-			UIApplication.sharedApplication().networkActivityIndicatorVisible = false
 
 			// Show allert
 			let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
-			viewController.presentViewController(viewController, animated: true, completion: nil)
+			viewController.presentViewController(alert, animated: true, completion: nil)
 		}
 	}
 }

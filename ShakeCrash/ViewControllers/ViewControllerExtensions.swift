@@ -12,7 +12,11 @@ extension UIViewController {
 
 	public override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
 		if motion == .MotionShake {
-			presentFeedbackView()
+			if ShakeCrash.sharedInstance.userName == nil {
+				presentConfigShakeCrashView()
+			} else {
+				presentFeedbackView()
+			}
 		}
 	}
 

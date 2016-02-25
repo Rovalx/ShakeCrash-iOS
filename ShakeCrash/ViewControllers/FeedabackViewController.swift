@@ -65,6 +65,10 @@ class FeedabackViewController: UIViewController, MFMailComposeViewControllerDele
 	override func presentFeedbackView() {
 		// DO NOTHING
 	}
+    
+    override func presentConfigShakeCrashView() {
+        // DO NOTHING
+    }
 
 	func captureContentView() -> UIImage {
 

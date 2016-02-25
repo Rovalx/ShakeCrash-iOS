@@ -34,13 +34,16 @@ class WelcomeCrashViewController: UIViewController {
 	override func presentFeedbackView() {
 		// DO NOTHING
 	}
+
+	override func presentConfigShakeCrashView() {
+		// DO NOTHING
+	}
 }
 
 extension WelcomeCrashViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
+
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
+	}
 }

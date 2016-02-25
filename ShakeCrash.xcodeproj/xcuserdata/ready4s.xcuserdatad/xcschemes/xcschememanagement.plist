@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ShakeCrashExample.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>295031551C77135E00D0E7FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2958A82B1C7F8F22002C591B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
