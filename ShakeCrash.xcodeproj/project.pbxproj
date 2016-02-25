@@ -132,9 +132,9 @@
 		2937C0FB1C79015100EE46CF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2937C0FE1C79015100EE46CF /* ViewControllerExtensions.swift */,
 				2937C0FC1C79015100EE46CF /* FeedabackViewController.swift */,
 				2937C0FD1C79015100EE46CF /* FeedabackViewController.xib */,
-				2937C0FE1C79015100EE46CF /* ViewControllerExtensions.swift */,
 				2937C0FF1C79015100EE46CF /* WelcomeCrashViewController.swift */,
 				2937C1001C79015100EE46CF /* WelcomeCrashViewController.xib */,
 			);

@@ -15,6 +15,7 @@ class FeedabackViewController: UIViewController, MFMailComposeViewControllerDele
 	@IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
 
 	var image: UIImage?
+	var viewControllerName: String?
 	var callingViewController: UIViewController?
 
 	override func viewDidLoad() {
@@ -32,17 +33,18 @@ class FeedabackViewController: UIViewController, MFMailComposeViewControllerDele
 
 	@IBAction func sendAction(sender: AnyObject) {
 		if let callingViewController = callingViewController,
-		description = descriptionTextView.text,
-		userName = ShakeCrash.sharedInstance.userName {
+			description = descriptionTextView.text,
+			userName = ShakeCrash.sharedInstance.userName,
+			viewControllerName = viewControllerName {
 
-			ShakeCrash.sharedInstance.delegate?
-				.sendReportFromViewController(
-					callingViewController,
-					image: captureContentView(),
-					description: description,
-					userName: userName)
+				ShakeCrash.sharedInstance.delegate?
+					.sendReportFromViewController(viewControllerName,
+						callingViewController: callingViewController,
+						image: captureContentView(),
+						description: description,
+						userName: userName)
 		}
-    }
+	}
 
 	@IBAction func dissmissAction(sender: AnyObject) {
 		self.dismissViewControllerAnimated(true, completion: nil)
@@ -65,10 +67,10 @@ class FeedabackViewController: UIViewController, MFMailComposeViewControllerDele
 	override func presentFeedbackView() {
 		// DO NOTHING
 	}
-    
-    override func presentConfigShakeCrashView() {
-        // DO NOTHING
-    }
+
+	override func presentConfigShakeCrashView() {
+		// DO NOTHING
+	}
 
 	func captureContentView() -> UIImage {
 

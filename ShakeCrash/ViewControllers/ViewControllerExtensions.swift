@@ -31,6 +31,7 @@ extension UIViewController {
 		let image = capture()
 		feedbackVC.image = image
 		feedbackVC.callingViewController = viewController
+		feedbackVC.viewControllerName = "\(self.dynamicType)"
 
 		feedbackVC.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
 		feedbackVC.modalPresentationStyle = .OverCurrentContext

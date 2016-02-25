@@ -10,26 +10,29 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 	}
 
 	public func sendReportFromViewController(
-		viewController: UIViewController,
+		activeScreenName: String,
+		callingViewController: UIViewController,
 		image: UIImage,
 		description: String,
 		userName: String) {
 
 			let mailComposeViewController = configuredMailComposeViewController(
-				image,
+				activeScreenName,
+				image: image,
 				description: description,
 				userName: userName)
 
 			if MFMailComposeViewController.canSendMail() {
 
-				viewController.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+				callingViewController.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
 
-					viewController.presentViewController(mailComposeViewController, animated: true, completion: nil)
+					callingViewController.presentViewController(mailComposeViewController, animated: true, completion: nil)
 				})
 			}
 	}
 
 	internal func configuredMailComposeViewController(
+		activeScreenName: String,
 		image: UIImage,
 		description: String,
 		userName: String) -> MFMailComposeViewController {
@@ -52,7 +55,7 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 			}
 			let versioNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")!
 			let appBuildNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion")!
-			title += " ,version \(versioNumber)(\(appBuildNumber))"
+			title += ", \(activeScreenName), version \(versioNumber)(\(appBuildNumber))"
 			mailComposerVC.setSubject(title)
 
 			mailComposerVC.addAttachmentData(jpegData!,

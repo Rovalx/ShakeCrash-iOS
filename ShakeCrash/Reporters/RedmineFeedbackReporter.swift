@@ -13,22 +13,29 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 	}
 
 	public func sendReportFromViewController(
-		viewController: UIViewController,
+		activeScreenName: String,
+		callingViewController: UIViewController,
 		image: UIImage,
 		description: String,
 		userName: String) {
 
 			// Start network indicator and deactivate button
-			if let feedbacVC = viewController.presentedViewController
+			if let feedbacVC = callingViewController.presentedViewController
 			as? FeedabackViewController {
 				feedbacVC.sendButton.active = false
 			}
 			UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 
-			sendImageToRedMine(viewController, image: image, description: description, userName: userName)
+			sendImageToRedMine(
+				activeScreenName,
+				viewController: callingViewController,
+				image: image,
+				description: description,
+				userName: userName)
 	}
 
 	private func sendIssueToRedmine(
+		activeScreenName: String,
 		viewController: UIViewController,
 		description: String,
 		userName: String,
@@ -48,7 +55,7 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 			}
 			let versioNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")!
 			let appBuildNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion")!
-			title += " ,version \(versioNumber)(\(appBuildNumber))"
+			title += ", \(activeScreenName), version \(versioNumber)(\(appBuildNumber))"
 
 			let params = [
 				"issue": [
@@ -99,6 +106,7 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 	}
 
 	private func sendImageToRedMine(
+		activeScreenName: String,
 		viewController: UIViewController,
 		image: UIImage,
 		description: String,
@@ -134,7 +142,12 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 							data, options: NSJSONReadingOptions.MutableContainers)
 
 						if let upload = responseJSON["upload"], let token = upload?["token"] as? String {
-							self.sendIssueToRedmine(viewController, description: description, userName: userName, token: token)
+							self.sendIssueToRedmine(
+								activeScreenName,
+								viewController: viewController,
+								description: description,
+								userName: userName,
+								token: token)
 						} else {
 							print("Redmine Reporter: no photo token in response")
 							self.showErrorMessage(viewController.presentedViewController,
