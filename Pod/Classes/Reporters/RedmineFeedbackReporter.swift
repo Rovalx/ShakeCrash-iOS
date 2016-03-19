@@ -61,18 +61,19 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 				"issue": [
 					"subject": title,
 					"priority": "4",
-					"description" : description,
-					"uploads" : [
+					"description": description,
+					"uploads": [
 						[
-							"token" : token,
-							"filename" : "report_\(NSDate().timeIntervalSince1970).jpeg",
-							"content_type" : "image/jpeg"
+							"token": token,
+							"filename": "report_\(NSDate().timeIntervalSince1970).jpeg",
+							"content_type": "image/jpeg"
 						]
 					]
 				]
 			]
 			do {
-				let json = try NSJSONSerialization.dataWithJSONObject(params, options: .PrettyPrinted)
+				let json = try
+                    NSJSONSerialization.dataWithJSONObject(params, options: .PrettyPrinted)
 				request.HTTPBody = json
 			} catch {
 				print("Redmine Reporter: crashed while creating parameters")
@@ -84,18 +85,20 @@ public class RedmineFeedbackReporter: NSObject, FeedbackReportDelegate {
 			// Send it
 			let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
 
-				guard error == nil && data != nil else {
-					print("Redmine Reporter: error = \(error) ")
-					self.showErrorMessage(viewController.presentedViewController,
-						message: "Error while sending issue")
-					return
+				guard error == nil && data != nil
+                    else {
+                        print("Redmine Reporter: error = \(error) ")
+                        self.showErrorMessage(viewController.presentedViewController,
+                            message: "Error while sending issue")
+                        return
 				}
 
-				if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 201 {
-					print("Redmine Reporter: statusCode should be 200, but is \(httpStatus.statusCode) ")
-					print("Redmine Reporter: response = \(response) ")
-					self.showErrorMessage(viewController.presentedViewController,
-						message: "Issue couldn't be added")
+				if let httpStatus = response as? NSHTTPURLResponse
+                    where httpStatus.statusCode != 201 {
+                        print("Redmine Reporter: statusCode should be 200, but is \(httpStatus.statusCode) ")
+                        print("Redmine Reporter: response = \(response) ")
+                        self.showErrorMessage(viewController.presentedViewController,
+                            message: "Issue couldn't be added")
 				}
 
 				// Hide network indicator on success
