@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ShakeCrash_Example', :exclusive => true do
+  pod 'ShakeCrash', :path => '../'
+end
+
+target 'ShakeCrash_Tests', :exclusive => true do
+  pod 'ShakeCrash', :path => '../'
+
+  
+end
