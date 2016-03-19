@@ -2,7 +2,6 @@
 
 ShakeCrash is great way to involve you testers in deep in-app reporting. It's idea was taken from Google Maps, just shake your iPhone to submit screenshot with description via e-mail or Redmine!
 
-[![CI Status](http://img.shields.io/travis/Dominik Majda/ShakeCrash.svg?style=flat)](https://travis-ci.org/Dominik Majda/ShakeCrash)
 [![Version](https://img.shields.io/cocoapods/v/ShakeCrash.svg?style=flat)](http://cocoapods.org/pods/ShakeCrash)
 [![License](https://img.shields.io/cocoapods/l/ShakeCrash.svg?style=flat)](http://cocoapods.org/pods/ShakeCrash)
 [![Platform](https://img.shields.io/cocoapods/p/ShakeCrash.svg?style=flat)](http://cocoapods.org/pods/ShakeCrash)
