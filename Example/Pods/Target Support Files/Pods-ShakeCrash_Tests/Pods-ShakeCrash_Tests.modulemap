@@ -1,0 +1,6 @@
+framework module Pods_ShakeCrash_Tests {
+  umbrella header "Pods-ShakeCrash_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

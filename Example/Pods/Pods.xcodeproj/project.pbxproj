@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04DB7C04CD1A853DCF1F97DDCAA84174 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */; };
+		06520D74227FB6D3034B196070059AFD /* FeedabackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB950B1360AD349CF081AFF225B0FD /* FeedabackViewController.swift */; };
+		0712F3576642F39CBE3A82740F6300C0 /* ShakeCrash.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */; };
+		07197C2D6654CB220244F8162ABF0717 /* FeedabackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0F99A0DEA6038D4EBD8771650E9B /* FeedabackViewController.xib */; };
+		125B502D93C783A1EC1A4A45B2FF24F3 /* Pods-ShakeCrash_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		191DE42E26E1387ACC73CB9CB25E1083 /* WelcomeCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D48E6625E2EF54053BA6CE79730903 /* WelcomeCrashViewController.swift */; };
+		25A2083D32C8DEA09E7393997F53392A /* RedmineFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */; };
+		3184883C9D06C97CF3C1F7912F9ED0B4 /* MailFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */; };
+		37A0D058D0B76C88DDF4F2EEB835476E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		61799B2092E7C366BB44D1001316CD62 /* FeedbackReportDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */; };
+		61F06E00410877D33819888FA7C5A05D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A47ECDD17C87ED7D2F656CEF13830A /* PlaceholderTextView.swift */; };
+		74DBB22DEB5EC496A8F4D720D513D636 /* Pods-ShakeCrash_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB75F4F31A9F62C728E6F489DB0DCFF /* Pods-ShakeCrash_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09299BDE18DDB5EFC7437143669F526C /* Swiftly.swift */; };
+		918BC61B282E618F316CE93264718FDE /* Pods-ShakeCrash_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2EFA97373B1DBD7996017E69AA4556 /* Pods-ShakeCrash_Tests-dummy.m */; };
+		A2D8AE447617083F9C5B8CD37C32156F /* shake_icon.png in Sources */ = {isa = PBXBuildFile; fileRef = A46275A81F3977EB897B4AEF43A7D580 /* shake_icon.png */; };
+		B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */; };
+		B5846D842E891FF31B22D8A328489F19 /* ShakeCrash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6011C7DD1E3E3BFD5268B566AA4AEEA /* ShakeCrash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */; };
+		BCF9E6EE2300DEFE1014FE64E5BE2008 /* ShakeCrash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A32364DEDA28CE8BDED3068152A99A8 /* ShakeCrash-dummy.m */; };
+		C7635207C4CBC491EE6D8D89BCED71B2 /* ShakeCrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */; };
+		EAFE11EA2D11EE810B17AEAFBEDF2484 /* WelcomeCrashViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1057EEAD21560FC23F8639B4C20970BD /* WelcomeCrashViewController.xib */; };
+		F9878A24CB589A38FFED95EE121E4F44 /* Pods-ShakeCrash_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B71229A3C1A446A69D8C6C59A34DEE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BC8E9436DB6986F59338A398265EB3E;
+			remoteInfo = "ShakeCrash-ShakeCrash";
+		};
+		49A53E9E191B089C30E53C63B1725A48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91DF0558ECEDD3C7E534A59CCB2A254A;
+			remoteInfo = ShakeCrash;
+		};
+		B4E0CC2741C49C0C297B63D793AF0C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91DF0558ECEDD3C7E534A59CCB2A254A;
+			remoteInfo = ShakeCrash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0544E2A61979CD5ECAF5B7DE6DC9DCA7 /* Pods-ShakeCrash_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		09299BDE18DDB5EFC7437143669F526C /* Swiftly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Swiftly.swift; sourceTree = "<group>"; };
+		1057EEAD21560FC23F8639B4C20970BD /* WelcomeCrashViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WelcomeCrashViewController.xib; sourceTree = "<group>"; };
+		269BCA7DE6D1D976D152F102DA5BC79B /* Pods-ShakeCrash_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShakeCrash_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		27CE38A30151C6C3AE4CD0CADAA34010 /* Pods-ShakeCrash_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2A32364DEDA28CE8BDED3068152A99A8 /* ShakeCrash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShakeCrash-dummy.m"; sourceTree = "<group>"; };
+		2D6A5A5E4623E0EAB723DBDC0D71317D /* ShakeCrash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ShakeCrash.modulemap; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43DCC5D371B1C6C2170CE19C05150277 /* Pods-ShakeCrash_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ShakeCrash_Example.modulemap"; sourceTree = "<group>"; };
+		4B2E608FC41108D1225DE296DBD8268B /* Pods-ShakeCrash_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Tests-resources.sh"; sourceTree = "<group>"; };
+		4CE3BF41F8D1BE425192FD473F1FB205 /* Pods-ShakeCrash_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ShakeCrash_Tests.modulemap"; sourceTree = "<group>"; };
+		535EF85297E06C82A2BB036D394B2BB1 /* ShakeCrash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShakeCrash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB75F4F31A9F62C728E6F489DB0DCFF /* Pods-ShakeCrash_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShakeCrash_Tests-umbrella.h"; sourceTree = "<group>"; };
+		6660C36588408198F518F32008EC42F5 /* Pods-ShakeCrash_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShakeCrash_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6E9C78B8DF37BC907F1A1F9C4C8C3917 /* Pods-ShakeCrash_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShakeCrash_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		705F69F0EF748EF41CBD88B951C83E5E /* Pods-ShakeCrash_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Example-resources.sh"; sourceTree = "<group>"; };
+		719BED2BA8011E9B770B6F1DDEE00408 /* Pods-ShakeCrash_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShakeCrash_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackReportDelegate.swift; sourceTree = "<group>"; };
+		74D48E6625E2EF54053BA6CE79730903 /* WelcomeCrashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeCrashViewController.swift; sourceTree = "<group>"; };
+		762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShakeCrash.swift; sourceTree = "<group>"; };
+		7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RedmineFeedbackReporter.swift; sourceTree = "<group>"; };
+		889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShakeCrash_Example-dummy.m"; sourceTree = "<group>"; };
+		9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeCrash_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawableImage.swift; sourceTree = "<group>"; };
+		93CB950B1360AD349CF081AFF225B0FD /* FeedabackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedabackViewController.swift; sourceTree = "<group>"; };
+		98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShakeCrash_Example-umbrella.h"; sourceTree = "<group>"; };
+		9FD00CBE76D66ACEC5993DCE15BAE5A2 /* ShakeCrash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShakeCrash-prefix.pch"; sourceTree = "<group>"; };
+		A46275A81F3977EB897B4AEF43A7D580 /* shake_icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = shake_icon.png; sourceTree = "<group>"; };
+		A5FA0F99A0DEA6038D4EBD8771650E9B /* FeedabackViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedabackViewController.xib; sourceTree = "<group>"; };
+		A6011C7DD1E3E3BFD5268B566AA4AEEA /* ShakeCrash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShakeCrash-umbrella.h"; sourceTree = "<group>"; };
+		A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShakeCrash.xcconfig; sourceTree = "<group>"; };
+		AC26315D557131959F9D93318FFB03E8 /* Pods-ShakeCrash_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		B9C4C752DA3F0AF1B433D9609A3CFDB8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB17AD306D09315C9B4D23333C87182E /* Pods-ShakeCrash_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeCrash.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1986989EB1FF22B8E4F79FD1453EE35 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C448BC31E2794BA4B2B6118EFBCA79E0 /* Pods-ShakeCrash_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C8575530FD7387A1E67F3638F43CD1BC /* Pods_ShakeCrash_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeCrash_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A47ECDD17C87ED7D2F656CEF13830A /* PlaceholderTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		D5D307192E39FE842B2C4C5497EC731E /* Pods-ShakeCrash_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DD2EFA97373B1DBD7996017E69AA4556 /* Pods-ShakeCrash_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShakeCrash_Tests-dummy.m"; sourceTree = "<group>"; };
+		DF2F44DA0945B810DD4740899D48F204 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MailFeedbackReporter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B0CFC75BFD23117FD1C9D6CCF37FE4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3130F9B3F77F9A9EDE3D467F259DAEAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A0D058D0B76C88DDF4F2EEB835476E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69C38D46B807A26A80CB7D957251A319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F06E00410877D33819888FA7C5A05D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0826D5FA2869A4E81C5681401323D0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B8D6CFEEF29181FB5EE92883915CF9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				93CB950B1360AD349CF081AFF225B0FD /* FeedabackViewController.swift */,
+				A5FA0F99A0DEA6038D4EBD8771650E9B /* FeedabackViewController.xib */,
+				7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */,
+				74D48E6625E2EF54053BA6CE79730903 /* WelcomeCrashViewController.swift */,
+				1057EEAD21560FC23F8639B4C20970BD /* WelcomeCrashViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		08F51B02C68598901A338517EC85CF0C /* Pods-ShakeCrash_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DF2F44DA0945B810DD4740899D48F204 /* Info.plist */,
+				4CE3BF41F8D1BE425192FD473F1FB205 /* Pods-ShakeCrash_Tests.modulemap */,
+				269BCA7DE6D1D976D152F102DA5BC79B /* Pods-ShakeCrash_Tests-acknowledgements.markdown */,
+				6E9C78B8DF37BC907F1A1F9C4C8C3917 /* Pods-ShakeCrash_Tests-acknowledgements.plist */,
+				DD2EFA97373B1DBD7996017E69AA4556 /* Pods-ShakeCrash_Tests-dummy.m */,
+				BB17AD306D09315C9B4D23333C87182E /* Pods-ShakeCrash_Tests-frameworks.sh */,
+				4B2E608FC41108D1225DE296DBD8268B /* Pods-ShakeCrash_Tests-resources.sh */,
+				5CB75F4F31A9F62C728E6F489DB0DCFF /* Pods-ShakeCrash_Tests-umbrella.h */,
+				AC26315D557131959F9D93318FFB03E8 /* Pods-ShakeCrash_Tests.debug.xcconfig */,
+				D5D307192E39FE842B2C4C5497EC731E /* Pods-ShakeCrash_Tests.release.xcconfig */,
+			);
+			name = "Pods-ShakeCrash_Tests";
+			path = "Target Support Files/Pods-ShakeCrash_Tests";
+			sourceTree = "<group>";
+		};
+		1AFEDA6EE076CD4C468702D0236475B9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93A9F0F82A1FA4C29EE1AFDE073364E0 /* Pods-ShakeCrash_Example */,
+				08F51B02C68598901A338517EC85CF0C /* Pods-ShakeCrash_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		27F031D8887FDA14BA07F71C77537205 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */,
+				C8A47ECDD17C87ED7D2F656CEF13830A /* PlaceholderTextView.swift */,
+				AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		35C3DCFE171700BC25FB77337D2DCE42 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1986989EB1FF22B8E4F79FD1453EE35 /* Info.plist */,
+				2D6A5A5E4623E0EAB723DBDC0D71317D /* ShakeCrash.modulemap */,
+				A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */,
+				2A32364DEDA28CE8BDED3068152A99A8 /* ShakeCrash-dummy.m */,
+				9FD00CBE76D66ACEC5993DCE15BAE5A2 /* ShakeCrash-prefix.pch */,
+				A6011C7DD1E3E3BFD5268B566AA4AEEA /* ShakeCrash-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ShakeCrash";
+			sourceTree = "<group>";
+		};
+		4185FA9C28C81BCC2B989149D81760E4 /* ShakeCrash */ = {
+			isa = PBXGroup;
+			children = (
+				43796F2234A28D3C1F4804479661C49C /* Pod */,
+				35C3DCFE171700BC25FB77337D2DCE42 /* Support Files */,
+			);
+			name = ShakeCrash;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		43796F2234A28D3C1F4804479661C49C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AB41846715D0D34956F1FC1ABF40D4D8 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		5D3F7D3BB749206F1B769A5232FD0B74 /* Reporters */ = {
+			isa = PBXGroup;
+			children = (
+				73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */,
+				F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */,
+				7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */,
+			);
+			path = Reporters;
+			sourceTree = "<group>";
+		};
+		6B83DBB042550D8BF0FD58895B0D55DF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				09299BDE18DDB5EFC7437143669F526C /* Swiftly.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		72294C6D8AA07514448D459963E08612 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8575530FD7387A1E67F3638F43CD1BC /* Pods_ShakeCrash_Example.framework */,
+				9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */,
+				BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */,
+				535EF85297E06C82A2BB036D394B2BB1 /* ShakeCrash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				D8A8AE1A7929D4730B1203628D0C9D29 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				72294C6D8AA07514448D459963E08612 /* Products */,
+				1AFEDA6EE076CD4C468702D0236475B9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		93A9F0F82A1FA4C29EE1AFDE073364E0 /* Pods-ShakeCrash_Example */ = {
+			isa = PBXGroup;
+			children = (
+				B9C4C752DA3F0AF1B433D9609A3CFDB8 /* Info.plist */,
+				43DCC5D371B1C6C2170CE19C05150277 /* Pods-ShakeCrash_Example.modulemap */,
+				6660C36588408198F518F32008EC42F5 /* Pods-ShakeCrash_Example-acknowledgements.markdown */,
+				719BED2BA8011E9B770B6F1DDEE00408 /* Pods-ShakeCrash_Example-acknowledgements.plist */,
+				889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */,
+				C448BC31E2794BA4B2B6118EFBCA79E0 /* Pods-ShakeCrash_Example-frameworks.sh */,
+				705F69F0EF748EF41CBD88B951C83E5E /* Pods-ShakeCrash_Example-resources.sh */,
+				98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */,
+				0544E2A61979CD5ECAF5B7DE6DC9DCA7 /* Pods-ShakeCrash_Example.debug.xcconfig */,
+				27CE38A30151C6C3AE4CD0CADAA34010 /* Pods-ShakeCrash_Example.release.xcconfig */,
+			);
+			name = "Pods-ShakeCrash_Example";
+			path = "Target Support Files/Pods-ShakeCrash_Example";
+			sourceTree = "<group>";
+		};
+		AB41846715D0D34956F1FC1ABF40D4D8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A46275A81F3977EB897B4AEF43A7D580 /* shake_icon.png */,
+				762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */,
+				6B83DBB042550D8BF0FD58895B0D55DF /* Libraries */,
+				5D3F7D3BB749206F1B769A5232FD0B74 /* Reporters */,
+				00B8D6CFEEF29181FB5EE92883915CF9 /* ViewControllers */,
+				27F031D8887FDA14BA07F71C77537205 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D8A8AE1A7929D4730B1203628D0C9D29 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4185FA9C28C81BCC2B989149D81760E4 /* ShakeCrash */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A67BD609988829168C8DEEE9D9D4AA25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5846D842E891FF31B22D8A328489F19 /* ShakeCrash-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE86F0AB2BBEEDD9E2584678AD5169B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				125B502D93C783A1EC1A4A45B2FF24F3 /* Pods-ShakeCrash_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46C4C1C7A4D5F97C231AA5AF731D6AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DBB22DEB5EC496A8F4D720D513D636 /* Pods-ShakeCrash_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0BC8E9436DB6986F59338A398265EB3E /* ShakeCrash-ShakeCrash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E408743E43882DDD9C3C0B4F56C4FE /* Build configuration list for PBXNativeTarget "ShakeCrash-ShakeCrash" */;
+			buildPhases = (
+				5B47BE3205CAED19278DA8A92F02FF5A /* Sources */,
+				B0826D5FA2869A4E81C5681401323D0E /* Frameworks */,
+				0EFD5DD172690E82376CF44F602504E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShakeCrash-ShakeCrash";
+			productName = "ShakeCrash-ShakeCrash";
+			productReference = BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		4DFE9E75F652197FE851D09513A882F1 /* Pods-ShakeCrash_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D49439A0A7ED626DFEAC838FDA25E56 /* Build configuration list for PBXNativeTarget "Pods-ShakeCrash_Tests" */;
+			buildPhases = (
+				A88EB177375DE1E2337A82145E897D6F /* Sources */,
+				1B0CFC75BFD23117FD1C9D6CCF37FE4A /* Frameworks */,
+				F46C4C1C7A4D5F97C231AA5AF731D6AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87324087607BE6C775F4A0A2EF085F20 /* PBXTargetDependency */,
+			);
+			name = "Pods-ShakeCrash_Tests";
+			productName = "Pods-ShakeCrash_Tests";
+			productReference = 9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8A3E0E15928D660459819D43F9EEF42 /* Build configuration list for PBXNativeTarget "ShakeCrash" */;
+			buildPhases = (
+				E4D771AB4455010F1D6003F064986ED0 /* Sources */,
+				3130F9B3F77F9A9EDE3D467F259DAEAA /* Frameworks */,
+				5B7C4D9CAD394E2931BA777E9F0C572D /* Resources */,
+				A67BD609988829168C8DEEE9D9D4AA25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44D44F0F3DA7AC695CAEEB129E9177F8 /* PBXTargetDependency */,
+			);
+			name = ShakeCrash;
+			productName = ShakeCrash;
+			productReference = 535EF85297E06C82A2BB036D394B2BB1 /* ShakeCrash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B74925D388A9077D27A328BDADBC3B73 /* Pods-ShakeCrash_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F75BA9114532279FD50B51AFB73904F1 /* Build configuration list for PBXNativeTarget "Pods-ShakeCrash_Example" */;
+			buildPhases = (
+				90E57BDD92ED9D5627A4B89452845FAF /* Sources */,
+				69C38D46B807A26A80CB7D957251A319 /* Frameworks */,
+				BE86F0AB2BBEEDD9E2584678AD5169B7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FC81A0CC6759C1192C6690E8B0E30B5 /* PBXTargetDependency */,
+			);
+			name = "Pods-ShakeCrash_Example";
+			productName = "Pods-ShakeCrash_Example";
+			productReference = C8575530FD7387A1E67F3638F43CD1BC /* Pods_ShakeCrash_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 72294C6D8AA07514448D459963E08612 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B74925D388A9077D27A328BDADBC3B73 /* Pods-ShakeCrash_Example */,
+				4DFE9E75F652197FE851D09513A882F1 /* Pods-ShakeCrash_Tests */,
+				91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */,
+				0BC8E9436DB6986F59338A398265EB3E /* ShakeCrash-ShakeCrash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EFD5DD172690E82376CF44F602504E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7C4D9CAD394E2931BA777E9F0C572D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0712F3576642F39CBE3A82740F6300C0 /* ShakeCrash.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B47BE3205CAED19278DA8A92F02FF5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90E57BDD92ED9D5627A4B89452845FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9878A24CB589A38FFED95EE121E4F44 /* Pods-ShakeCrash_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88EB177375DE1E2337A82145E897D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918BC61B282E618F316CE93264718FDE /* Pods-ShakeCrash_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4D771AB4455010F1D6003F064986ED0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */,
+				06520D74227FB6D3034B196070059AFD /* FeedabackViewController.swift in Sources */,
+				07197C2D6654CB220244F8162ABF0717 /* FeedabackViewController.xib in Sources */,
+				61799B2092E7C366BB44D1001316CD62 /* FeedbackReportDelegate.swift in Sources */,
+				3184883C9D06C97CF3C1F7912F9ED0B4 /* MailFeedbackReporter.swift in Sources */,
+				635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */,
+				25A2083D32C8DEA09E7393997F53392A /* RedmineFeedbackReporter.swift in Sources */,
+				A2D8AE447617083F9C5B8CD37C32156F /* shake_icon.png in Sources */,
+				BCF9E6EE2300DEFE1014FE64E5BE2008 /* ShakeCrash-dummy.m in Sources */,
+				C7635207C4CBC491EE6D8D89BCED71B2 /* ShakeCrash.swift in Sources */,
+				8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */,
+				B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */,
+				04DB7C04CD1A853DCF1F97DDCAA84174 /* ViewExtensions.swift in Sources */,
+				191DE42E26E1387ACC73CB9CB25E1083 /* WelcomeCrashViewController.swift in Sources */,
+				EAFE11EA2D11EE810B17AEAFBEDF2484 /* WelcomeCrashViewController.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44D44F0F3DA7AC695CAEEB129E9177F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShakeCrash-ShakeCrash";
+			target = 0BC8E9436DB6986F59338A398265EB3E /* ShakeCrash-ShakeCrash */;
+			targetProxy = 3B71229A3C1A446A69D8C6C59A34DEE7 /* PBXContainerItemProxy */;
+		};
+		4FC81A0CC6759C1192C6690E8B0E30B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ShakeCrash;
+			target = 91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */;
+			targetProxy = 49A53E9E191B089C30E53C63B1725A48 /* PBXContainerItemProxy */;
+		};
+		87324087607BE6C775F4A0A2EF085F20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ShakeCrash;
+			target = 91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */;
+			targetProxy = B4E0CC2741C49C0C297B63D793AF0C59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		099EFC643B56ECE21DB408AFF3B2E5A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ShakeCrash/ShakeCrash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShakeCrash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ShakeCrash/ShakeCrash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ShakeCrash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0F9880085657E0F27DE42D28CF2CD1FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27CE38A30151C6C3AE4CD0CADAA34010 /* Pods-ShakeCrash_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ShakeCrash_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShakeCrash_Example/Pods-ShakeCrash_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ShakeCrash_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		280AD97CA80EAF5E6C87B3F3D1ABB03A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = ShakeCrash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		4573676F1EB1E456FF9749775CAB5F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC26315D557131959F9D93318FFB03E8 /* Pods-ShakeCrash_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Pods-ShakeCrash_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ShakeCrash_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B3A3862820D5E1636F18E3DFC0695AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ShakeCrash/ShakeCrash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShakeCrash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ShakeCrash/ShakeCrash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ShakeCrash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		81B4D3C6FB3D2F0EB13E762B80C69366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0544E2A61979CD5ECAF5B7DE6DC9DCA7 /* Pods-ShakeCrash_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ShakeCrash_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShakeCrash_Example/Pods-ShakeCrash_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ShakeCrash_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		890EF6DDB9305EA69609CE9AB53D54DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = ShakeCrash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		967436E166E107CD3FECE5828F03E376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D307192E39FE842B2C4C5497EC731E /* Pods-ShakeCrash_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Pods-ShakeCrash_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ShakeCrash_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D49439A0A7ED626DFEAC838FDA25E56 /* Build configuration list for PBXNativeTarget "Pods-ShakeCrash_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4573676F1EB1E456FF9749775CAB5F37 /* Debug */,
+				967436E166E107CD3FECE5828F03E376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9E408743E43882DDD9C3C0B4F56C4FE /* Build configuration list for PBXNativeTarget "ShakeCrash-ShakeCrash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280AD97CA80EAF5E6C87B3F3D1ABB03A /* Debug */,
+				890EF6DDB9305EA69609CE9AB53D54DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F75BA9114532279FD50B51AFB73904F1 /* Build configuration list for PBXNativeTarget "Pods-ShakeCrash_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B4D3C6FB3D2F0EB13E762B80C69366 /* Debug */,
+				0F9880085657E0F27DE42D28CF2CD1FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8A3E0E15928D660459819D43F9EEF42 /* Build configuration list for PBXNativeTarget "ShakeCrash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099EFC643B56ECE21DB408AFF3B2E5A4 /* Debug */,
+				6B3A3862820D5E1636F18E3DFC0695AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

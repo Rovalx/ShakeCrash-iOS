@@ -1,0 +1,6 @@
+framework module ShakeCrash {
+  umbrella header "ShakeCrash-umbrella.h"
+
+  export *
+  module * { export * }
+}

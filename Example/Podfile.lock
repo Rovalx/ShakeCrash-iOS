@@ -1,0 +1,14 @@
+PODS:
+  - ShakeCrash (0.1.0)
+
+DEPENDENCIES:
+  - ShakeCrash (from `../`)
+
+EXTERNAL SOURCES:
+  ShakeCrash:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ShakeCrash: 7ba7fb8e30e17e9aed8c2afbe5701c6ab94cd4f5
+
+COCOAPODS: 0.39.0
