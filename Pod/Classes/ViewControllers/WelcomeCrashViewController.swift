@@ -1,25 +1,20 @@
-//
-//  WelcomeViewController.swift
-//  ShakeCrash
-//
 //  Created by Dominik Majda on 20.02.2016.
-//  Copyright © 2016 MajduMajdu. All rights reserved.
-//
+//  Copyright © 2016 Dominik Majda. All rights reserved
 
 import UIKit
 
 class WelcomeCrashViewController: UIViewController {
 
+    // MARK: Outlets
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var startButton: UIButton!
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-	}
+    // MARK: Lifecycle
+    
+    // MARK: Actions
 
 	@IBAction func nameChanged(sender: UITextField) {
-
-		if sender.text?.characters.count >= 3 {
+		if sender.text!.count >= 3 {
 			startButton.active = true
 		} else {
 			startButton.active = false
@@ -28,8 +23,13 @@ class WelcomeCrashViewController: UIViewController {
 
 	@IBAction func startAction(sender: AnyObject) {
 		ShakeCrash.sharedInstance.userName = nameTextField.text!
-		self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
 	}
+    
+    // MARK: Shake methods
+    
+    // We override them in order to prevent shake
+    // gesture in this screen
 
 	override func presentFeedbackView() {
 		// DO NOTHING
@@ -40,9 +40,10 @@ class WelcomeCrashViewController: UIViewController {
 	}
 }
 
-extension WelcomeCrashViewController: UITextFieldDelegate {
+// MARK: Text field delegate
 
-	func textFieldShouldReturn(textField: UITextField) -> Bool {
+extension WelcomeCrashViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
 		return true
 	}

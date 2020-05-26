@@ -41,32 +41,33 @@ class PlaceholderTextView: UITextView {
 	}
 
 	deinit {
-		NSNotificationCenter.defaultCenter().removeObserver(self,
-			name: UITextViewTextDidChangeNotification,
+        NotificationCenter.default.removeObserver(
+            self,
+            name: UITextView.textDidChangeNotification,
 			object: nil)
 	}
 
 	private func setUpInit() {
 
-		NSNotificationCenter.defaultCenter().addObserver(self,
-			selector: "textDidChange",
-			name: UITextViewTextDidChangeNotification,
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textDidChange),
+            name: UITextView.textDidChangeNotification,
 			object: nil)
 
 		// Set placeholder
-
 		placeholderLabel.font = font
 		placeholderLabel.textColor = placeholderColor
 		placeholderLabel.textAlignment = textAlignment
 		placeholderLabel.text = placeholder
 		placeholderLabel.numberOfLines = 0
-		placeholderLabel.backgroundColor = UIColor.clearColor()
+        placeholderLabel.backgroundColor = .clear
 		addSubview(placeholderLabel)
 		placeholderLabel.applyLayout(
-				.Left() + textContainer.lineFragmentPadding, .Width(), .Top() + textContainerInset.top)
+            .left + textContainer.lineFragmentPadding, .width, .top + textContainerInset.top)
 	}
 
-	func textDidChange() {
-		placeholderLabel.hidden = !text.isEmpty
+	@objc func textDidChange() {
+        placeholderLabel.isHidden = !text.isEmpty
 	}
 }

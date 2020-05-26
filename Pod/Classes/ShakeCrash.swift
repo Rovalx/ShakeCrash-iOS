@@ -14,13 +14,13 @@ public class ShakeCrash {
 	public var userName: String? {
 
 		get {
-			let settings = NSUserDefaults(suiteName: SETTINGS)
-			return settings?.stringForKey(USER_NAME)
+            let settings = UserDefaults(suiteName: SETTINGS)
+            return settings?.string(forKey: USER_NAME)
 		}
 
 		set {
-			let settings = NSUserDefaults(suiteName: SETTINGS)
-			settings?.setObject(newValue, forKey: USER_NAME)
+            let settings = UserDefaults(suiteName: SETTINGS)
+            settings?.set(newValue, forKey: USER_NAME)
 			settings?.synchronize()
 		}
 	}

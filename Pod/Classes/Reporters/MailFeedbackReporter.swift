@@ -17,16 +17,16 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 		userName: String) {
 
 			let mailComposeViewController = configuredMailComposeViewController(
-				activeScreenName,
+                activeScreenName: activeScreenName,
 				image: image,
 				description: description,
 				userName: userName)
 
 			if MFMailComposeViewController.canSendMail() {
 
-				callingViewController.presentedViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+                callingViewController.presentedViewController?.dismiss(animated: true, completion: { () -> Void in
 
-					callingViewController.presentViewController(mailComposeViewController, animated: true, completion: nil)
+                    callingViewController.present(mailComposeViewController, animated: true, completion: nil)
 				})
 			}
 	}
@@ -38,9 +38,9 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 		userName: String) -> MFMailComposeViewController {
 
 			// Create image attachment
-			let jpegData = UIImageJPEGRepresentation(image, 1.0);
-			var fileName: NSString = "raport";
-			fileName = fileName.stringByAppendingPathExtension(".jpeg")!
+            let jpegData = image.jpegData(compressionQuality: 1.0)
+			var fileName: NSString = "raport"
+            fileName = fileName.appendingPathExtension(".jpeg")! as NSString
 
 			// Create email
 			let mailComposerVC = MFMailComposeViewController()
@@ -53,8 +53,8 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 			} else {
 				title += "] Report"
 			}
-			let versioNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")!
-			let appBuildNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion")!
+        let versioNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")!
+        let appBuildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion")!
 			title += ", \(activeScreenName), version \(versioNumber)(\(appBuildNumber))"
 			mailComposerVC.setSubject(title)
 
@@ -69,10 +69,8 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 
 			return mailComposerVC
 	}
-
-	public func mailComposeController(controller: MFMailComposeViewController,
-		didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-
-			controller.dismissViewControllerAnimated(true, completion: nil)
+    
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
 	}
 }

@@ -2,11 +2,11 @@ import UIKit
 
 extension UIView {
 
-	class func loadFromNibNamed(nibNamed: String, bundle : NSBundle? = nil) -> UIView? {
+    class func loadFromNibNamed(nibNamed: String, bundle : Bundle? = nil) -> UIView? {
 		return UINib(
 			nibName: nibNamed,
 			bundle: bundle
-		).instantiateWithOwner(nil, options: nil)[0] as? UIView
+        ).instantiate(withOwner: nil, options: nil)[0] as? UIView
 	}
 
 	@IBInspectable var cornerRadius: CGFloat {
@@ -31,13 +31,13 @@ extension UIView {
 	@IBInspectable var borderColor: UIColor {
 		get {
 			if let color = layer.borderColor {
-				return UIColor(CGColor: color)
+                return UIColor(cgColor: color)
 			} else {
-				return UIColor.clearColor()
+                return .clear
 			}
 		}
 		set {
-			layer.borderColor = newValue.CGColor
+			layer.borderColor = newValue.cgColor
 		}
 	}
 }
@@ -49,10 +49,10 @@ extension UITextField {
 			return 0
 		}
 		set {
-			let paddingView = UIView(frame: CGRectMake(0, 0, newValue, 1))
-			paddingView.backgroundColor = UIColor.clearColor()
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: 1))
+            paddingView.backgroundColor = .clear
 			self.leftView = paddingView;
-			self.leftViewMode = UITextFieldViewMode.Always;
+            self.leftViewMode = .always
 		}
 	}
 }
@@ -61,10 +61,10 @@ extension UIButton {
 
 	@IBInspectable var active: Bool {
 		get {
-			return self.enabled
+            return self.isEnabled
 		}
 		set {
-			self.enabled = newValue
+            self.isEnabled = newValue
 			if newValue {
 				self.alpha = 1.0
 			} else {

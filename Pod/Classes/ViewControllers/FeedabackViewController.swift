@@ -3,10 +3,11 @@ import MessageUI
 
 class FeedabackViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
+    // MARK: Outlets
+    
 	@IBOutlet weak var blueButton: UIButton!
 	@IBOutlet weak var redButton: UIButton!
 	@IBOutlet weak var greenButton: UIButton!
-
 	@IBOutlet weak var sendButton: UIButton!
 	@IBOutlet weak var drawableView: DrawableView!
 	@IBOutlet weak var descriptionTextView: UITextView!
@@ -14,10 +15,14 @@ class FeedabackViewController: UIViewController, MFMailComposeViewControllerDele
 	@IBOutlet weak var feedbackImageView: UIImageView!
 	@IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
 
-	var image: UIImage?
-	var viewControllerName: String?
-	var callingViewController: UIViewController?
-
+    // MARK: Properties
+    
+	var image: UIImage!
+	var viewControllerName: String!
+	var callingViewController: UIViewController!
+    
+    // MARK: Lifecycle
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -25,79 +30,92 @@ class FeedabackViewController: UIViewController, MFMailComposeViewControllerDele
 		feedbackImageView.image = image
 
 		// Opacity for view
-		view.backgroundColor = UIColor.clearColor()
-		view.opaque = false
+        view.backgroundColor = .clear
+        view.isOpaque = false
 	}
 
-	// MARK: - Outlet Actions
+	// MARK: Actions
 
 	@IBAction func sendAction(sender: AnyObject) {
-		if let callingViewController = callingViewController,
-			description = descriptionTextView.text,
-			userName = ShakeCrash.sharedInstance.userName,
-			viewControllerName = viewControllerName {
+		guard
+			let description = descriptionTextView.text,
+			let userName = ShakeCrash.sharedInstance.userName else {
+                return
+        }
 
-				ShakeCrash.sharedInstance.delegate?
-					.sendReportFromViewController(viewControllerName,
-						callingViewController: callingViewController,
-						image: captureContentView(),
-						description: description,
-						userName: userName)
-		}
+        ShakeCrash.sharedInstance.delegate?
+            .sendReportFromViewController(
+                activeScreenName: viewControllerName,
+                callingViewController: callingViewController,
+                image: captureContentView(),
+                description: description,
+                userName: userName)
 	}
 
 	@IBAction func dissmissAction(sender: AnyObject) {
-		self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
 	}
 
 	@IBAction func changeColorAction(sender: UIButton) {
 
 		switch sender {
 		case redButton:
-			drawableView.strokeColor = UIColor.redColor()
+            drawableView.strokeColor = .red
 		case blueButton:
-			drawableView.strokeColor = UIColor.blueColor()
+            drawableView.strokeColor = .blue
 		case greenButton:
-			drawableView.strokeColor = UIColor.greenColor()
+            drawableView.strokeColor = .green
 		default:
-			drawableView.strokeColor = UIColor.redColor()
+            drawableView.strokeColor = .red
 		}
 	}
+    
+    
+    // MARK: Shake methods
+    
+    // We override them in order to prevent shake
+    // gesture in this screen
 
 	override func presentFeedbackView() {
 		// DO NOTHING
 	}
 
-	override func presentConfigShakeCrashView() {
+    override func presentConfigShakeCrashView() {
 		// DO NOTHING
 	}
+    
+    // MARK: Capture screenshot
+    
+    // TODO: This is outdated as fuck
 
 	func captureContentView() -> UIImage {
 
-		UIGraphicsBeginImageContextWithOptions(contentView.frame.size, true, UIScreen.mainScreen().scale)
-		drawableView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-		contentView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        UIGraphicsBeginImageContextWithOptions(contentView.frame.size, true, UIScreen.main.scale)
+        drawableView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        contentView.layer.render(in: UIGraphicsGetCurrentContext()!)
 		let image = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
 
-		return image
+		return image!
 	}
 }
 
-extension FeedabackViewController: UITextViewDelegate {
+// MARK: Text view delegate
 
-	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-		super.touchesBegan(touches, withEvent: event)
+extension FeedabackViewController: UITextViewDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
 
 		// End editing
 		self.view.endEditing(true)
 	}
-
-	func textViewDidBeginEditing(textView: UITextView) {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
 		self.textViewHeightConstraint.constant = 200.0
 	}
 
-	func textViewDidEndEditing(textView: UITextView) {
+	func textViewDidEndEditing(_ textView: UITextView) {
 		self.textViewHeightConstraint.constant = 50.0
 	}
 }

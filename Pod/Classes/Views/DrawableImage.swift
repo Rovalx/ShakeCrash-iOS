@@ -7,7 +7,7 @@ class DrawableView: UIView {
 	var lineWidth: CGFloat = 2.0
 	var pathSet = [UIBezierPath: UIColor]()
 
-	var strokeColor: UIColor = UIColor.redColor() {
+    var strokeColor: UIColor = UIColor.red {
 		didSet {
 			lastPath = UIBezierPath()
 			pathSet[lastPath] = strokeColor
@@ -21,7 +21,7 @@ class DrawableView: UIView {
 
 		super.init(frame: frame)
 
-		let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "pan:")
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(pan(panGestureRecognizer:)))
 		panGestureRecognizer.maximumNumberOfTouches = 1
 		self.addGestureRecognizer(panGestureRecognizer)
 	}
@@ -33,28 +33,28 @@ class DrawableView: UIView {
 
 		super.init(coder: aDecoder)!
 
-		let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "pan:")
+		let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(pan(panGestureRecognizer:)))
 		panGestureRecognizer.maximumNumberOfTouches = 1
 		self.addGestureRecognizer(panGestureRecognizer)
 	}
 
-	override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
 		// Drawing code
-		for (path, color) in pathSet.reverse() {
+		for (path, color) in pathSet.reversed() {
 			color.setStroke()
 			path.stroke()
 			path.lineWidth = lineWidth
 		}
 	}
 
-	func pan(panGestureRecognizer: UIPanGestureRecognizer) -> Void {
-		let currentPoint = panGestureRecognizer.locationInView(self)
-		let midPoint = self.midPoint(previousPoint, p1: currentPoint)
+	@objc func pan(panGestureRecognizer: UIPanGestureRecognizer) -> Void {
+        let currentPoint = panGestureRecognizer.location(in: self)
+        let midPoint = self.midPoint(p0: previousPoint, p1: currentPoint)
 
-		if panGestureRecognizer.state == .Began {
-			lastPath.moveToPoint(currentPoint)
-		} else if panGestureRecognizer.state == .Changed {
-			lastPath.addQuadCurveToPoint(midPoint, controlPoint: previousPoint)
+        if panGestureRecognizer.state == .began {
+            lastPath.move(to: currentPoint)
+        } else if panGestureRecognizer.state == .changed {
+            lastPath.addQuadCurve(to: midPoint, controlPoint: previousPoint)
 		}
 
 		previousPoint = currentPoint

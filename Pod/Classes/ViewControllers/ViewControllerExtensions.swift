@@ -1,17 +1,11 @@
 import UIKit
 
 extension UIViewController {
-
-	func listAllConstraints() {
-		for subview in view.subviews as [UIView] {
-			for constraint in subview.constraints as [NSLayoutConstraint] {
-				print(constraint)
-			}
-		}
-	}
-
-	public override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-		if motion == .MotionShake {
+    
+    // MARK: Detect shaking
+    
+    open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
 			if ShakeCrash.sharedInstance.userName == nil {
 				presentConfigShakeCrashView()
 			} else {
@@ -19,28 +13,32 @@ extension UIViewController {
 			}
 		}
 	}
+    
+    // MARK: Present screenshot
+    
+    // TODO: Check what is going on here
 
-	public func presentFeedbackView() {
+	@objc public func presentFeedbackView() {
 
 		let viewController = currentViewController()
 
 		// Create feedback view controller
 		let feedbackVC = FeedabackViewController(
 			nibName: "FeedabackViewController",
-			bundle: NSBundle(forClass: FeedabackViewController.self))
-		let image = capture()
+            bundle: Bundle(for: FeedabackViewController.self))
+        let image = capture()
 		feedbackVC.image = image
 		feedbackVC.callingViewController = viewController
-		feedbackVC.viewControllerName = "\(self.dynamicType)"
+        feedbackVC.viewControllerName = "\(type(of: self))"
 
-		feedbackVC.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-		feedbackVC.modalPresentationStyle = .OverCurrentContext
+        feedbackVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        feedbackVC.modalPresentationStyle = .overCurrentContext
 
 		// Present feedback view controller
-		viewController?.presentViewController(feedbackVC, animated: true, completion: nil)
+        viewController?.present(feedbackVC, animated: true, completion: nil)
 	}
 
-	public func presentConfigShakeCrashView() {
+    @objc public func presentConfigShakeCrashView() {
 
 		if ShakeCrash.sharedInstance.userName == nil {
 
@@ -49,20 +47,24 @@ extension UIViewController {
 			// Create feedback view controller
 			let welcomeVC = WelcomeCrashViewController(
 				nibName: "WelcomeCrashViewController",
-				bundle: NSBundle(forClass: WelcomeCrashViewController.self))
+                bundle: Bundle(for: WelcomeCrashViewController.self))
 
-			welcomeVC.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-			welcomeVC.modalPresentationStyle = .OverCurrentContext
+            welcomeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            welcomeVC.modalPresentationStyle = .overCurrentContext
 
 			// Present feedback view controller
-			viewController?.presentViewController(welcomeVC, animated: true, completion: nil)
+            viewController?.present(welcomeVC, animated: true, completion: nil)
 		}
 	}
+    
+    // MARK: Find top controller
+    
+    // TODO: This is incorrect!@
 
 	private func currentViewController() -> UIViewController? {
 
 		// Get current view controller
-		var viewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        var viewController = UIApplication.shared.keyWindow?.rootViewController
 
 		if let presentedViewController = viewController?.presentedViewController {
 			viewController = presentedViewController
@@ -70,19 +72,23 @@ extension UIViewController {
 
 		return viewController
 	}
+    
+    // MARK: Capture screenshot
 
+    // TODO: This is outdated as fuck
+    
 	private func capture() -> UIImage {
 
-		let masterView = UIApplication.sharedApplication().keyWindow!
-		let scale = UIScreen.mainScreen().scale
+        let masterView = UIApplication.shared.keyWindow!
+        let scale = UIScreen.main.scale
 
 		UIGraphicsBeginImageContextWithOptions(
-			masterView.frame.size, masterView.opaque, scale)
-		masterView.drawViewHierarchyInRect(
-			masterView.bounds, afterScreenUpdates: true)
+            masterView.frame.size, masterView.isOpaque, scale)
+        masterView.drawHierarchy(
+            in: masterView.bounds, afterScreenUpdates: true)
 		let image = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
 
-		return image
+		return image!
 	}
 }
