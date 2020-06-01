@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		04DB7C04CD1A853DCF1F97DDCAA84174 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */; };
-		06520D74227FB6D3034B196070059AFD /* FeedabackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB950B1360AD349CF081AFF225B0FD /* FeedabackViewController.swift */; };
+		06520D74227FB6D3034B196070059AFD /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB950B1360AD349CF081AFF225B0FD /* FeedbackViewController.swift */; };
 		0712F3576642F39CBE3A82740F6300C0 /* ShakeCrash.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */; };
-		07197C2D6654CB220244F8162ABF0717 /* FeedabackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0F99A0DEA6038D4EBD8771650E9B /* FeedabackViewController.xib */; };
 		125B502D93C783A1EC1A4A45B2FF24F3 /* Pods-ShakeCrash_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		191DE42E26E1387ACC73CB9CB25E1083 /* WelcomeCrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D48E6625E2EF54053BA6CE79730903 /* WelcomeCrashViewController.swift */; };
 		25A2083D32C8DEA09E7393997F53392A /* RedmineFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */; };
 		3184883C9D06C97CF3C1F7912F9ED0B4 /* MailFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */; };
+		36C7CDFC2485A26E00A766D9 /* FeedbackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 3677F636248591A60088F704 /* FeedbackViewController.xib */; };
+		36C7CE012485A65D00A766D9 /* FeedbackTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */; };
+		36C7CE022485A65D00A766D9 /* FeedbackTextViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */; };
 		37A0D058D0B76C88DDF4F2EEB835476E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		61799B2092E7C366BB44D1001316CD62 /* FeedbackReportDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */; };
@@ -23,13 +24,11 @@
 		74DBB22DEB5EC496A8F4D720D513D636 /* Pods-ShakeCrash_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB75F4F31A9F62C728E6F489DB0DCFF /* Pods-ShakeCrash_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09299BDE18DDB5EFC7437143669F526C /* Swiftly.swift */; };
 		918BC61B282E618F316CE93264718FDE /* Pods-ShakeCrash_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2EFA97373B1DBD7996017E69AA4556 /* Pods-ShakeCrash_Tests-dummy.m */; };
-		A2D8AE447617083F9C5B8CD37C32156F /* shake_icon.png in Sources */ = {isa = PBXBuildFile; fileRef = A46275A81F3977EB897B4AEF43A7D580 /* shake_icon.png */; };
 		B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */; };
 		B5846D842E891FF31B22D8A328489F19 /* ShakeCrash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6011C7DD1E3E3BFD5268B566AA4AEEA /* ShakeCrash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */; };
 		BCF9E6EE2300DEFE1014FE64E5BE2008 /* ShakeCrash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A32364DEDA28CE8BDED3068152A99A8 /* ShakeCrash-dummy.m */; };
 		C7635207C4CBC491EE6D8D89BCED71B2 /* ShakeCrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */; };
-		EAFE11EA2D11EE810B17AEAFBEDF2484 /* WelcomeCrashViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1057EEAD21560FC23F8639B4C20970BD /* WelcomeCrashViewController.xib */; };
 		F9878A24CB589A38FFED95EE121E4F44 /* Pods-ShakeCrash_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -60,11 +59,14 @@
 /* Begin PBXFileReference section */
 		0544E2A61979CD5ECAF5B7DE6DC9DCA7 /* Pods-ShakeCrash_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		09299BDE18DDB5EFC7437143669F526C /* Swiftly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Swiftly.swift; sourceTree = "<group>"; };
-		1057EEAD21560FC23F8639B4C20970BD /* WelcomeCrashViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WelcomeCrashViewController.xib; sourceTree = "<group>"; };
 		269BCA7DE6D1D976D152F102DA5BC79B /* Pods-ShakeCrash_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShakeCrash_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		27CE38A30151C6C3AE4CD0CADAA34010 /* Pods-ShakeCrash_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2A32364DEDA28CE8BDED3068152A99A8 /* ShakeCrash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShakeCrash-dummy.m"; sourceTree = "<group>"; };
 		2D6A5A5E4623E0EAB723DBDC0D71317D /* ShakeCrash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ShakeCrash.modulemap; sourceTree = "<group>"; };
+		3677F62A24855CBD0088F704 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3677F636248591A60088F704 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextViewController.swift; sourceTree = "<group>"; };
+		36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackTextViewController.xib; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		43DCC5D371B1C6C2170CE19C05150277 /* Pods-ShakeCrash_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ShakeCrash_Example.modulemap"; sourceTree = "<group>"; };
 		4B2E608FC41108D1225DE296DBD8268B /* Pods-ShakeCrash_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -76,18 +78,15 @@
 		705F69F0EF748EF41CBD88B951C83E5E /* Pods-ShakeCrash_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Example-resources.sh"; sourceTree = "<group>"; };
 		719BED2BA8011E9B770B6F1DDEE00408 /* Pods-ShakeCrash_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShakeCrash_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackReportDelegate.swift; sourceTree = "<group>"; };
-		74D48E6625E2EF54053BA6CE79730903 /* WelcomeCrashViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeCrashViewController.swift; sourceTree = "<group>"; };
 		762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShakeCrash.swift; sourceTree = "<group>"; };
 		7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RedmineFeedbackReporter.swift; sourceTree = "<group>"; };
 		889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShakeCrash_Example-dummy.m"; sourceTree = "<group>"; };
 		9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeCrash_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawableImage.swift; sourceTree = "<group>"; };
-		93CB950B1360AD349CF081AFF225B0FD /* FeedabackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedabackViewController.swift; sourceTree = "<group>"; };
+		93CB950B1360AD349CF081AFF225B0FD /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShakeCrash_Example-umbrella.h"; sourceTree = "<group>"; };
 		9FD00CBE76D66ACEC5993DCE15BAE5A2 /* ShakeCrash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShakeCrash-prefix.pch"; sourceTree = "<group>"; };
-		A46275A81F3977EB897B4AEF43A7D580 /* shake_icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = shake_icon.png; sourceTree = "<group>"; };
-		A5FA0F99A0DEA6038D4EBD8771650E9B /* FeedabackViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FeedabackViewController.xib; sourceTree = "<group>"; };
 		A6011C7DD1E3E3BFD5268B566AA4AEEA /* ShakeCrash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShakeCrash-umbrella.h"; sourceTree = "<group>"; };
 		A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ShakeCrash.xcconfig; sourceTree = "<group>"; };
 		AC26315D557131959F9D93318FFB03E8 /* Pods-ShakeCrash_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,10 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */,
-				93CB950B1360AD349CF081AFF225B0FD /* FeedabackViewController.swift */,
-				A5FA0F99A0DEA6038D4EBD8771650E9B /* FeedabackViewController.xib */,
-				74D48E6625E2EF54053BA6CE79730903 /* WelcomeCrashViewController.swift */,
-				1057EEAD21560FC23F8639B4C20970BD /* WelcomeCrashViewController.xib */,
+				93CB950B1360AD349CF081AFF225B0FD /* FeedbackViewController.swift */,
+				3677F636248591A60088F704 /* FeedbackViewController.xib */,
+				36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */,
+				36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,6 +206,7 @@
 		4185FA9C28C81BCC2B989149D81760E4 /* ShakeCrash */ = {
 			isa = PBXGroup;
 			children = (
+				3677F62A24855CBD0088F704 /* README.md */,
 				43796F2234A28D3C1F4804479661C49C /* Pod */,
 				35C3DCFE171700BC25FB77337D2DCE42 /* Support Files */,
 			);
@@ -283,7 +283,6 @@
 		AB41846715D0D34956F1FC1ABF40D4D8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A46275A81F3977EB897B4AEF43A7D580 /* shake_icon.png */,
 				762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */,
 				6B83DBB042550D8BF0FD58895B0D55DF /* Libraries */,
 				5D3F7D3BB749206F1B769A5232FD0B74 /* Reporters */,
@@ -427,6 +426,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 1120;
+				TargetAttributes = {
+					B74925D388A9077D27A328BDADBC3B73 = {
+						LastSwiftMigration = 1150;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -495,21 +499,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C7CE012485A65D00A766D9 /* FeedbackTextViewController.swift in Sources */,
+				36C7CE022485A65D00A766D9 /* FeedbackTextViewController.xib in Sources */,
+				36C7CDFC2485A26E00A766D9 /* FeedbackViewController.xib in Sources */,
 				B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */,
-				06520D74227FB6D3034B196070059AFD /* FeedabackViewController.swift in Sources */,
-				07197C2D6654CB220244F8162ABF0717 /* FeedabackViewController.xib in Sources */,
+				06520D74227FB6D3034B196070059AFD /* FeedbackViewController.swift in Sources */,
 				61799B2092E7C366BB44D1001316CD62 /* FeedbackReportDelegate.swift in Sources */,
 				3184883C9D06C97CF3C1F7912F9ED0B4 /* MailFeedbackReporter.swift in Sources */,
 				635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */,
 				25A2083D32C8DEA09E7393997F53392A /* RedmineFeedbackReporter.swift in Sources */,
-				A2D8AE447617083F9C5B8CD37C32156F /* shake_icon.png in Sources */,
 				BCF9E6EE2300DEFE1014FE64E5BE2008 /* ShakeCrash-dummy.m in Sources */,
 				C7635207C4CBC491EE6D8D89BCED71B2 /* ShakeCrash.swift in Sources */,
 				8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */,
 				B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */,
 				04DB7C04CD1A853DCF1F97DDCAA84174 /* ViewExtensions.swift in Sources */,
-				191DE42E26E1387ACC73CB9CB25E1083 /* WelcomeCrashViewController.swift in Sources */,
-				EAFE11EA2D11EE810B17AEAFBEDF2484 /* WelcomeCrashViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +574,7 @@
 			baseConfigurationReference = 27CE38A30151C6C3AE4CD0CADAA34010 /* Pods-ShakeCrash_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -592,6 +596,7 @@
 				PRODUCT_NAME = Pods_ShakeCrash_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -677,6 +682,7 @@
 			baseConfigurationReference = 0544E2A61979CD5ECAF5B7DE6DC9DCA7 /* Pods-ShakeCrash_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -699,6 +705,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

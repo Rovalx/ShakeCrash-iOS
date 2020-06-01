@@ -6,11 +6,7 @@ extension UIViewController {
     
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-			if ShakeCrash.sharedInstance.userName == nil {
-				presentConfigShakeCrashView()
-			} else {
-				presentFeedbackView()
-			}
+            presentFeedbackView()
 		}
 	}
     
@@ -20,58 +16,42 @@ extension UIViewController {
 
 	@objc public func presentFeedbackView() {
 
+        let navVC = UINavigationController()
+        navVC.navigationBar.barTintColor = .white
+        
 		let viewController = currentViewController()
 
 		// Create feedback view controller
-		let feedbackVC = FeedabackViewController(
-			nibName: "FeedabackViewController",
-            bundle: Bundle(for: FeedabackViewController.self))
+		let feedbackVC = FeedbackViewController(
+			nibName: "FeedbackViewController",
+            bundle: Bundle(for: FeedbackViewController.self))
         let image = capture()
 		feedbackVC.image = image
 		feedbackVC.callingViewController = viewController
         feedbackVC.viewControllerName = "\(type(of: self))"
-
-        feedbackVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        feedbackVC.modalPresentationStyle = .overCurrentContext
-
+        
+        navVC.viewControllers = [feedbackVC, ]
+        navVC.modalPresentationStyle = .fullScreen
+        
 		// Present feedback view controller
-        viewController?.present(feedbackVC, animated: true, completion: nil)
-	}
-
-    @objc public func presentConfigShakeCrashView() {
-
-		if ShakeCrash.sharedInstance.userName == nil {
-
-			let viewController = currentViewController()
-
-			// Create feedback view controller
-			let welcomeVC = WelcomeCrashViewController(
-				nibName: "WelcomeCrashViewController",
-                bundle: Bundle(for: WelcomeCrashViewController.self))
-
-            welcomeVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            welcomeVC.modalPresentationStyle = .overCurrentContext
-
-			// Present feedback view controller
-            viewController?.present(welcomeVC, animated: true, completion: nil)
-		}
+        viewController?.present(navVC, animated: true, completion: nil)
 	}
     
     // MARK: Find top controller
-    
-    // TODO: This is incorrect!@
 
 	private func currentViewController() -> UIViewController? {
-
-		// Get current view controller
-        var viewController = UIApplication.shared.keyWindow?.rootViewController
-
-		if let presentedViewController = viewController?.presentedViewController {
-			viewController = presentedViewController
-		}
-
-		return viewController
-	}
+        guard let window = UIApplication.shared.keyWindow, let rootViewController = window.rootViewController else {
+            return nil
+        }
+        
+        var topController = rootViewController
+        
+        while let newTopController = topController.presentedViewController {
+            topController = newTopController
+        }
+        
+        return topController
+    }
     
     // MARK: Capture screenshot
 

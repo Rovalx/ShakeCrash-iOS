@@ -48,7 +48,7 @@
 //			request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 //
 //			var title = "[ShakeReporter"
-//			if let userName = ShakeCrash.sharedInstance.userName {
+//			if let userName = ShakeCrash.shared.userName {
 //				title += "] Report from \(userName)"
 //			} else {
 //				title += "] Report"

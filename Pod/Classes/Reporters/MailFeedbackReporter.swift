@@ -47,14 +47,9 @@ public class MailFeedbackReporter: NSObject, FeedbackReportDelegate, MFMailCompo
 			mailComposerVC.mailComposeDelegate = self
 			mailComposerVC.setToRecipients([bugReportAddress])
 
-			var title = "[ShakeReporter"
-			if let userName = ShakeCrash.sharedInstance.userName {
-				title += "] Report from \(userName)"
-			} else {
-				title += "] Report"
-			}
-        let versioNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")!
-        let appBuildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion")!
+			var title = "[ShakeReporter] Report"
+            let versioNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")!
+            let appBuildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion")!
 			title += ", \(activeScreenName), version \(versioNumber)(\(appBuildNumber))"
 			mailComposerVC.setSubject(title)
 

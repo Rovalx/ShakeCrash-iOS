@@ -29,6 +29,12 @@ class PlaceholderTextView: UITextView {
 			placeholderLabel.textAlignment = textAlignment
 		}
 	}
+    
+    override var text: String! {
+        didSet {
+            textDidChange()
+        }
+    }
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)

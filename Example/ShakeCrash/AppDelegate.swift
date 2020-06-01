@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 	}
 
 	private func configureShakeReporter() {
-		let shakeReporterSettings = ShakeCrash.sharedInstance
+//		let shakeReporterSettings = ShakeCrash.shared
 //
 //		let redmineReporter = RedmineFeedbackReporter(
 //			redmineAddress: "redmineaddress",
