@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIView {
+internal extension UIView {
 
     class func loadFromNibNamed(nibNamed: String, bundle : Bundle? = nil) -> UIView? {
 		return UINib(
@@ -42,7 +42,7 @@ extension UIView {
 	}
 }
 
-extension UITextField {
+internal extension UITextField {
 
 	@IBInspectable var leftPadding: CGFloat {
 		get {
@@ -57,7 +57,7 @@ extension UITextField {
 	}
 }
 
-extension UIButton {
+internal extension UIButton {
 
 	@IBInspectable var active: Bool {
 		get {

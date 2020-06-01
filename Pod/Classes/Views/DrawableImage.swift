@@ -1,6 +1,6 @@
 import UIKit
 
-class DrawableView: UIView {
+internal class DrawableView: UIView {
 
 	var lastPath: UIBezierPath
 	var previousPoint: CGPoint

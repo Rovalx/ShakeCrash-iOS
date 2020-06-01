@@ -52,18 +52,13 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
 	// MARK: Actions
 
 	@objc private func sendAction(sender: UIBarButtonItem) {
-		guard
-			let description = descriptionTextView.text else {
-                return
-        }
-
-//        ShakeCrash.shared.delegate?
-//            .sendReportFromViewController(
-//                activeScreenName: viewControllerName,
-//                callingViewController: callingViewController,
-//                image: captureContentView(),
-//                description: description,
-//                userName: userName)
+        Reporter.send(report: Report(
+            screenName: viewControllerName,
+            callingViewController:
+            callingViewController,
+            screenshot: captureContentView(),
+            text: descriptionTextView.text?.nilIfEmpty)
+        )
 	}
 
 	@objc private func dissmissAction(sender: UIBarButtonItem) {

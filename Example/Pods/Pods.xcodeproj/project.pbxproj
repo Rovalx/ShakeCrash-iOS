@@ -11,14 +11,13 @@
 		06520D74227FB6D3034B196070059AFD /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB950B1360AD349CF081AFF225B0FD /* FeedbackViewController.swift */; };
 		0712F3576642F39CBE3A82740F6300C0 /* ShakeCrash.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */; };
 		125B502D93C783A1EC1A4A45B2FF24F3 /* Pods-ShakeCrash_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25A2083D32C8DEA09E7393997F53392A /* RedmineFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */; };
-		3184883C9D06C97CF3C1F7912F9ED0B4 /* MailFeedbackReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */; };
+		25A2083D32C8DEA09E7393997F53392A /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799FEE854136CD897B3C7D25056B66F /* Reporter.swift */; };
 		36C7CDFC2485A26E00A766D9 /* FeedbackViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 3677F636248591A60088F704 /* FeedbackViewController.xib */; };
 		36C7CE012485A65D00A766D9 /* FeedbackTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */; };
 		36C7CE022485A65D00A766D9 /* FeedbackTextViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */; };
+		36C7CE072485AE0500A766D9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE052485AE0000A766D9 /* StringExtensions.swift */; };
 		37A0D058D0B76C88DDF4F2EEB835476E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		61799B2092E7C366BB44D1001316CD62 /* FeedbackReportDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */; };
 		61F06E00410877D33819888FA7C5A05D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A47ECDD17C87ED7D2F656CEF13830A /* PlaceholderTextView.swift */; };
 		74DBB22DEB5EC496A8F4D720D513D636 /* Pods-ShakeCrash_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB75F4F31A9F62C728E6F489DB0DCFF /* Pods-ShakeCrash_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +66,8 @@
 		3677F636248591A60088F704 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextViewController.swift; sourceTree = "<group>"; };
 		36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackTextViewController.xib; sourceTree = "<group>"; };
+		36C7CE032485A98B00A766D9 /* ShakeCrash.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShakeCrash.podspec; sourceTree = "<group>"; };
+		36C7CE052485AE0000A766D9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		43DCC5D371B1C6C2170CE19C05150277 /* Pods-ShakeCrash_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ShakeCrash_Example.modulemap"; sourceTree = "<group>"; };
 		4B2E608FC41108D1225DE296DBD8268B /* Pods-ShakeCrash_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -77,10 +78,9 @@
 		6E9C78B8DF37BC907F1A1F9C4C8C3917 /* Pods-ShakeCrash_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShakeCrash_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		705F69F0EF748EF41CBD88B951C83E5E /* Pods-ShakeCrash_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Example-resources.sh"; sourceTree = "<group>"; };
 		719BED2BA8011E9B770B6F1DDEE00408 /* Pods-ShakeCrash_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShakeCrash_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackReportDelegate.swift; sourceTree = "<group>"; };
 		762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShakeCrash.swift; sourceTree = "<group>"; };
 		7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
-		7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RedmineFeedbackReporter.swift; sourceTree = "<group>"; };
+		7799FEE854136CD897B3C7D25056B66F /* Reporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShakeCrash_Example-dummy.m"; sourceTree = "<group>"; };
 		9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeCrash_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawableImage.swift; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 		D5D307192E39FE842B2C4C5497EC731E /* Pods-ShakeCrash_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DD2EFA97373B1DBD7996017E69AA4556 /* Pods-ShakeCrash_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShakeCrash_Tests-dummy.m"; sourceTree = "<group>"; };
 		DF2F44DA0945B810DD4740899D48F204 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MailFeedbackReporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +142,6 @@
 		00B8D6CFEEF29181FB5EE92883915CF9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */,
 				93CB950B1360AD349CF081AFF225B0FD /* FeedbackViewController.swift */,
 				3677F636248591A60088F704 /* FeedbackViewController.xib */,
 				36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */,
@@ -184,7 +182,6 @@
 			children = (
 				930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */,
 				C8A47ECDD17C87ED7D2F656CEF13830A /* PlaceholderTextView.swift */,
-				AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,9 +200,20 @@
 			path = "Example/Pods/Target Support Files/ShakeCrash";
 			sourceTree = "<group>";
 		};
+		36C7CE042485ADE600A766D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */,
+				7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */,
+				36C7CE052485AE0000A766D9 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4185FA9C28C81BCC2B989149D81760E4 /* ShakeCrash */ = {
 			isa = PBXGroup;
 			children = (
+				36C7CE032485A98B00A766D9 /* ShakeCrash.podspec */,
 				3677F62A24855CBD0088F704 /* README.md */,
 				43796F2234A28D3C1F4804479661C49C /* Pod */,
 				35C3DCFE171700BC25FB77337D2DCE42 /* Support Files */,
@@ -222,14 +230,12 @@
 			path = Pod;
 			sourceTree = "<group>";
 		};
-		5D3F7D3BB749206F1B769A5232FD0B74 /* Reporters */ = {
+		5D3F7D3BB749206F1B769A5232FD0B74 /* Reporter */ = {
 			isa = PBXGroup;
 			children = (
-				73B9D421924F5345F4CCFFA16E869DC3 /* FeedbackReportDelegate.swift */,
-				F6A3D27BDB05F145305683DF0B3CB41E /* MailFeedbackReporter.swift */,
-				7799FEE854136CD897B3C7D25056B66F /* RedmineFeedbackReporter.swift */,
+				7799FEE854136CD897B3C7D25056B66F /* Reporter.swift */,
 			);
-			path = Reporters;
+			path = Reporter;
 			sourceTree = "<group>";
 		};
 		6B83DBB042550D8BF0FD58895B0D55DF /* Libraries */ = {
@@ -283,9 +289,10 @@
 		AB41846715D0D34956F1FC1ABF40D4D8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				36C7CE042485ADE600A766D9 /* Extensions */,
 				762C869BD854E4184246F18738D6C32D /* ShakeCrash.swift */,
 				6B83DBB042550D8BF0FD58895B0D55DF /* Libraries */,
-				5D3F7D3BB749206F1B769A5232FD0B74 /* Reporters */,
+				5D3F7D3BB749206F1B769A5232FD0B74 /* Reporter */,
 				00B8D6CFEEF29181FB5EE92883915CF9 /* ViewControllers */,
 				27F031D8887FDA14BA07F71C77537205 /* Views */,
 			);
@@ -504,14 +511,13 @@
 				36C7CDFC2485A26E00A766D9 /* FeedbackViewController.xib in Sources */,
 				B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */,
 				06520D74227FB6D3034B196070059AFD /* FeedbackViewController.swift in Sources */,
-				61799B2092E7C366BB44D1001316CD62 /* FeedbackReportDelegate.swift in Sources */,
-				3184883C9D06C97CF3C1F7912F9ED0B4 /* MailFeedbackReporter.swift in Sources */,
 				635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */,
-				25A2083D32C8DEA09E7393997F53392A /* RedmineFeedbackReporter.swift in Sources */,
+				25A2083D32C8DEA09E7393997F53392A /* Reporter.swift in Sources */,
 				BCF9E6EE2300DEFE1014FE64E5BE2008 /* ShakeCrash-dummy.m in Sources */,
 				C7635207C4CBC491EE6D8D89BCED71B2 /* ShakeCrash.swift in Sources */,
 				8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */,
 				B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */,
+				36C7CE072485AE0500A766D9 /* StringExtensions.swift in Sources */,
 				04DB7C04CD1A853DCF1F97DDCAA84174 /* ViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,15 @@
 import Foundation
 
+public typealias Attribiutes = [String: Any]
+
 public final class ShakeCrash {
 
     internal static var appKey: String!
     
-    internal static var userAttribiutes = [String: Any]()
+    internal static var userAttribiutes = Attribiutes()
     internal static var userId: String?
     
     public static let log = Log()
-
-	public var delegate: FeedbackReportDelegate?
     
     private init() {}
     
@@ -82,4 +82,11 @@ public final class Log {
     public func error(_ str: String) {
         entries.append(Entry(level: .error, text: str))
     }
+}
+
+internal struct Report {
+    let screenName: String
+    let callingViewController: UIViewController
+    let screenshot: UIImage
+    let text: String?
 }

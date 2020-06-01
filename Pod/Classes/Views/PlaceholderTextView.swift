@@ -1,8 +1,6 @@
-import Foundation
-
 import UIKit
 
-class PlaceholderTextView: UITextView {
+internal class PlaceholderTextView: UITextView {
 
 	private let placeholderLabel: UILabel = UILabel()
 
