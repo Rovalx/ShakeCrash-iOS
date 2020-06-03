@@ -20,17 +20,20 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
 	var image: UIImage!
 	var viewControllerName: String!
 	var callingViewController: UIViewController!
+    var waitAlert: UIAlertController?
     
     // MARK: Lifecycle
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        UIDevice.current.isBatteryMonitoringEnabled = true
 
 		// Set image in image view
 		feedbackImageView.image = image
         
         // Setup navigation bar
-        title = "Report crash"
+        title = "Report a problem"
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: "Cancel", style: .plain,
             target: self, action: #selector(dissmissAction(sender:))
@@ -52,13 +55,29 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
 	// MARK: Actions
 
 	@objc private func sendAction(sender: UIBarButtonItem) {
-        Reporter.send(report: Report(
+        waitAlert = UIAlertController(title: "Sending...", message: nil, preferredStyle: .alert)
+        
+        let report = Report(
             screenName: viewControllerName,
             callingViewController:
             callingViewController,
             screenshot: captureContentView(),
             text: descriptionTextView.text?.nilIfEmpty)
-        )
+        present(waitAlert!, animated: true, completion: nil)
+        Reporter.send(report: report) { [weak self] result, error in
+            guard let self = self else { return }
+            
+            self.waitAlert?.dismiss(animated: true, completion: {
+                if let error = error {
+                    print(error.localizedDescription)
+                    self.display(error: error)
+                }
+                
+                if result {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        }
 	}
 
 	@objc private func dissmissAction(sender: UIBarButtonItem) {
@@ -91,6 +110,17 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
             drawableView.strokeColor = .red
 		}
 	}
+    
+    // MARK: Display methods
+    
+    private func display(error: Error) {
+        let alert = UIAlertController(
+            title: "Oops!",
+            message: "We encountered error when sending this report",
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
     
     
     // MARK: Shake methods

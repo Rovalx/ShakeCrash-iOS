@@ -6,7 +6,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 	var window: UIWindow?
 
-    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
 
 		// Override point for customization after application launch.
 		let splitViewController = self.window!.rootViewController as! UISplitViewController
@@ -16,19 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 		// Configure shake crash
 		configureShakeReporter()
-
-		return true
 	}
 
 	private func configureShakeReporter() {
-//		let shakeReporterSettings = ShakeCrash.shared
-//
-//		let redmineReporter = RedmineFeedbackReporter(
-//			redmineAddress: "redmineaddress",
-//			apiToken: "apitoken",
-//			projectId: "projectid")
-
-//		shakeReporterSettings.delegate = redmineReporter
+        ShakeCrash.initialize(withAppKey: "your key")
 	}
 
 	// MARK: - Split view

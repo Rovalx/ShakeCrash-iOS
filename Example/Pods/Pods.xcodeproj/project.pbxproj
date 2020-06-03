@@ -16,6 +16,10 @@
 		36C7CE012485A65D00A766D9 /* FeedbackTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */; };
 		36C7CE022485A65D00A766D9 /* FeedbackTextViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */; };
 		36C7CE072485AE0500A766D9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE052485AE0000A766D9 /* StringExtensions.swift */; };
+		36C7CE162486DCC100A766D9 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE142486DC9200A766D9 /* ImageExtensions.swift */; };
+		36C7CE1D2487EAE500A766D9 /* DeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE1B2487EAC300A766D9 /* DeviceExtensions.swift */; };
+		36C7CE1F2487EAF400A766D9 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE1E2487EAF400A766D9 /* BundleExtensions.swift */; };
+		36C7CE212487FCE300A766D9 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE202487FCE300A766D9 /* URLSessionExtensions.swift */; };
 		37A0D058D0B76C88DDF4F2EEB835476E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		61F06E00410877D33819888FA7C5A05D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
@@ -68,6 +72,10 @@
 		36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackTextViewController.xib; sourceTree = "<group>"; };
 		36C7CE032485A98B00A766D9 /* ShakeCrash.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShakeCrash.podspec; sourceTree = "<group>"; };
 		36C7CE052485AE0000A766D9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		36C7CE142486DC9200A766D9 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
+		36C7CE1B2487EAC300A766D9 /* DeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtensions.swift; sourceTree = "<group>"; };
+		36C7CE1E2487EAF400A766D9 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		36C7CE202487FCE300A766D9 /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		43DCC5D371B1C6C2170CE19C05150277 /* Pods-ShakeCrash_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ShakeCrash_Example.modulemap"; sourceTree = "<group>"; };
 		4B2E608FC41108D1225DE296DBD8268B /* Pods-ShakeCrash_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShakeCrash_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -206,6 +214,10 @@
 				AD609F884CB9FAC2348E10E31444FB54 /* ViewExtensions.swift */,
 				7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */,
 				36C7CE052485AE0000A766D9 /* StringExtensions.swift */,
+				36C7CE142486DC9200A766D9 /* ImageExtensions.swift */,
+				36C7CE1B2487EAC300A766D9 /* DeviceExtensions.swift */,
+				36C7CE1E2487EAF400A766D9 /* BundleExtensions.swift */,
+				36C7CE202487FCE300A766D9 /* URLSessionExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -506,15 +518,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C7CE1D2487EAE500A766D9 /* DeviceExtensions.swift in Sources */,
 				36C7CE012485A65D00A766D9 /* FeedbackTextViewController.swift in Sources */,
+				36C7CE212487FCE300A766D9 /* URLSessionExtensions.swift in Sources */,
 				36C7CE022485A65D00A766D9 /* FeedbackTextViewController.xib in Sources */,
 				36C7CDFC2485A26E00A766D9 /* FeedbackViewController.xib in Sources */,
 				B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */,
 				06520D74227FB6D3034B196070059AFD /* FeedbackViewController.swift in Sources */,
+				36C7CE162486DCC100A766D9 /* ImageExtensions.swift in Sources */,
 				635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */,
 				25A2083D32C8DEA09E7393997F53392A /* Reporter.swift in Sources */,
 				BCF9E6EE2300DEFE1014FE64E5BE2008 /* ShakeCrash-dummy.m in Sources */,
 				C7635207C4CBC491EE6D8D89BCED71B2 /* ShakeCrash.swift in Sources */,
+				36C7CE1F2487EAF400A766D9 /* BundleExtensions.swift in Sources */,
 				8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */,
 				B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */,
 				36C7CE072485AE0500A766D9 /* StringExtensions.swift in Sources */,
