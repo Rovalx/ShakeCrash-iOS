@@ -25,4 +25,5 @@ It simple - just shake your phone and new window with screenshot of current view
 
   s.source_files = 'Pod/Classes/**/*'
 
+  s.dependency 'Alamofire', '~> 5.0.0'
 end
