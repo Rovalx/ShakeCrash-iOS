@@ -24,6 +24,4 @@ It simple - just shake your phone and new window with screenshot of current view
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-
-  s.dependency 'Alamofire', '~> 4'
 end

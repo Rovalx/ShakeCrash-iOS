@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 	}
 
 	private func configureShakeReporter() {
-        ShakeCrash.initialize(withAppKey: "your key")
 	}
 
 	// MARK: - Split view

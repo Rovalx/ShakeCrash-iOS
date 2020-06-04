@@ -8,7 +8,6 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
 	@IBOutlet weak var blueButton: UIButton!
 	@IBOutlet weak var redButton: UIButton!
 	@IBOutlet weak var greenButton: UIButton!
-	@IBOutlet weak var sendButton: UIButton!
 	@IBOutlet weak var drawableView: DrawableView!
 	@IBOutlet weak var descriptionTextView: UILabel!
 	@IBOutlet weak var contentView: UIView!
@@ -21,6 +20,7 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
 	var viewControllerName: String!
 	var callingViewController: UIViewController!
     var waitAlert: UIAlertController?
+    var reportType: Report.FeedbackType!
     
     // MARK: Lifecycle
     
@@ -62,7 +62,8 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
             callingViewController:
             callingViewController,
             screenshot: captureContentView(),
-            text: descriptionTextView.text?.nilIfEmpty)
+            text: descriptionTextView.textColor == .lightGray ? nil : descriptionTextView.text?.nilIfEmpty,
+            type: reportType)
         present(waitAlert!, animated: true, completion: nil)
         Reporter.send(report: report) { [weak self] result, error in
             guard let self = self else { return }

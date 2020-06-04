@@ -3,11 +3,18 @@ import Foundation
 public typealias Attribiutes = [String: Any]
 
 public final class ShakeCrash {
+    
+    public struct Config {
+        let url: URL
+        let headers: [String: String]
+    }
 
     internal static var appKey: String!
     
     internal static var userAttribiutes = Attribiutes()
     internal static var userId: String?
+    
+    internal static var reporterConfig: Config!
     
     public static let log = Log()
     
@@ -15,8 +22,9 @@ public final class ShakeCrash {
     
     // MARK: Start crash
     
-    public static func initialize(withAppKey key: String) {
+    public static func initialize(withAppKey key: String, config: Config) {
         appKey = key
+        reporterConfig = config
     }
 
     // MARK: User attribiutes
@@ -85,8 +93,13 @@ public final class Log {
 }
 
 internal struct Report {
+    enum FeedbackType: String {
+        case problem, suggestion
+    }
+    
     let screenName: String
     let callingViewController: UIViewController
     let screenshot: UIImage
     let text: String?
+    let type: FeedbackType
 }

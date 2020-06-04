@@ -3,8 +3,20 @@ import Foundation
 
 internal final class Reporter {
     
+    class ReporterError: LocalizedError {
+        let msg: String
+        init(_ msg: String) {
+            self.msg = msg
+        }
+        
+        var localizedDescription: String {
+            return msg
+        }
+    }
+    
     static func send(report: Report, completion: @escaping (Bool, Error?) -> ()) {
         let formatter = ISO8601DateFormatter()
+        let config = ShakeCrash.reporterConfig!
         
         guard let appKey = ShakeCrash.appKey else {
             print("Missing appKey, you need to initialize ShakeCrash first")
@@ -14,34 +26,52 @@ internal final class Reporter {
         let params: [String: Any?] = [
             "appKey": appKey,
             "screenName": report.screenName,
-            "screenshot":
-                report.screenshot.resizeImage(newWidth: 800)?.jpegData(compressionQuality: 99)?.base64EncodedString(),
             "text": report.text,
             "identity": ShakeCrash.userId,
             "attribiutes": ShakeCrash.userAttribiutes,
             "deviceAttribiutes": deviceAttribiutes(),
-//            "logs": ShakeCrash.log.entries,
+            "type": report.type.rawValue,
+            //            "logs": ShakeCrash.log.entries,
             "date": formatter.string(from: Date())
         ]
         
-        let url = URL(string: "your path")!
+        let url = config.url
         let session = URLSession.shared
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        do {
-            request.httpBody = try JSONSerialization.data(
-                withJSONObject: params, options: .prettyPrinted)
-        } catch let error {
-            completion(false, error)
-            return
+        // Set the URLRequest to POST and to the specified URL
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        for (key, value) in config.headers {
+            urlRequest.setValue(value, forHTTPHeaderField: key)
         }
         
-        request.addValue("your key", forHTTPHeaderField: "X-Parse-Application-Id")
-        request.addValue("your key", forHTTPHeaderField: "X-Parse-REST-API-Key")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        var multiParams = [[String: Any]]()
+        for (key, value) in params where value != nil {
+            if let dict = value as? [String: Any] {
+                do {
+                    let jsonData = try JSONSerialization.data(
+                        withJSONObject: dict, options: .prettyPrinted)
+                    multiParams.append(
+                        ["name": key, "value": String(data: jsonData, encoding: .utf8)!]
+                    )
+                } catch let error {
+                    print("Unable to serialize \(key), \(error.localizedDescription)")
+                }
+            } else {
+                multiParams.append(
+                    ["name": key, "value": "\(value!)"]
+                )
+            }
+        }
+        multiParams.append(
+            ["name": "screenshot", "file": report.screenshot.jpegData(compressionQuality: 90)!]
+        )
         
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+        urlRequest.setPost(body: multiParams)
+        
+        // Send a POST request to the URL, with the data we created earlier
+        let task = session.dataTask(with: urlRequest) { responseData, response, error in
+            
             DispatchQueue.main.async {
                 guard error == nil else {
                     completion(false, error)
@@ -54,12 +84,18 @@ internal final class Reporter {
                     return
                 }
                 
+                let statusCode = (response as? HTTPURLResponse)?.statusCode
+                if statusCode != 201 {
+                    completion(false, ReporterError("Incorrect status code: \(statusCode ?? -1)"))
+                    return
+                }
+                
                 completion(true, nil)
             }
-        })
+            
+        }
         task.resume()
     }
-
     
     private static func deviceAttribiutes() -> Attribiutes {
         var details = [String: String]()
@@ -68,7 +104,7 @@ internal final class Reporter {
         osVersionStr += "." + String(osVersion.minorVersion)
         osVersionStr += "." + String(osVersion.patchVersion)
         details["os"] = "iOS"
-        details["deviceBrand"] = "iPhone"
+        details["deviceBrand"] = "Apple"
         details["osVersion"] = osVersionStr
         details["package"] = Bundle.main.bundleIdentifier
         details["hostName"] = ProcessInfo.processInfo.hostName
@@ -79,18 +115,12 @@ internal final class Reporter {
         details["screenHeight"] = "\(UIScreen.main.bounds.height)"
         details["soundLevel"] = "\(AVAudioSession.sharedInstance().outputVolume)"
         details["timezone"] = NSTimeZone.local.identifier
-        details["region"] = NSLocale.current.regionCode
+        details["local"] = "\(NSLocale.current)"
         details["networkMode"] = "wifi" // TODO!!
         details["batteryLevel"] = "\(UIDevice.current.batteryLevel)"
         details["appVersion"] = Bundle.main.infoVersionNumber
         return details
     }
-    
-    // android: SDK, Release?, device? app versi, tablet
-    // inaczej release/incremental, country
-    
-    
-    //{,"Device":"addison","Product":"addison","SDK":"26","Release":"8.0.0","Incremental":"10",,"Tablet":false,"Screen_Layout":"Normal Screen","Country":"Polska",}
     
     private static func screenOrientation() -> String {
         switch UIDevice.current.orientation{
