@@ -59,7 +59,7 @@ public final class Log {
     
     internal struct Entry {
         
-        enum Level {
+        enum Level: String {
             case verbose, debug, info, warning, error
         }
         

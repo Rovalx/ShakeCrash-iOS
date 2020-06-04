@@ -31,7 +31,7 @@ internal final class Reporter {
             "attribiutes": ShakeCrash.userAttribiutes,
             "deviceAttribiutes": deviceAttribiutes(),
             "type": report.type.rawValue,
-            //            "logs": ShakeCrash.log.entries,
+            "logs": logsToDict(logs: ShakeCrash.log.entries),
             "date": formatter.string(from: Date())
         ]
         
@@ -47,10 +47,10 @@ internal final class Reporter {
         
         var multiParams = [[String: Any]]()
         for (key, value) in params where value != nil {
-            if let dict = value as? [String: Any] {
+            if value is [String: Any] || value is [[String: Any]] {
                 do {
                     let jsonData = try JSONSerialization.data(
-                        withJSONObject: dict, options: .prettyPrinted)
+                        withJSONObject: value!, options: .prettyPrinted)
                     multiParams.append(
                         ["name": key, "value": String(data: jsonData, encoding: .utf8)!]
                     )
@@ -134,6 +134,17 @@ internal final class Reporter {
             return "landscapeRight"
         default:
             return "another"
+        }
+    }
+    
+    private static func logsToDict(logs: [Log.Entry]) -> [[String: String]] {
+        let formatter = ISO8601DateFormatter()
+        return logs.map { (entry) -> [String: String] in
+            return [
+                "level": entry.level.rawValue,
+                "text": entry.text,
+                "date": formatter.string(from: entry.time)
+            ]
         }
     }
 }
