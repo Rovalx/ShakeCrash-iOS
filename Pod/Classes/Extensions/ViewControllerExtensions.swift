@@ -15,7 +15,7 @@ extension UIViewController {
     // TODO: Check what is going on here
 
 	@objc public func presentFeedbackView() {
-        
+        let capture = self.capture()
         let viewController = currentViewController()
         let alert = UIAlertController(title: "What would you like to do?", message: nil, preferredStyle: .actionSheet)
         
@@ -30,7 +30,7 @@ extension UIViewController {
                 let feedbackVC = FeedbackViewController(
                     nibName: "FeedbackViewController",
                     bundle: Bundle(for: FeedbackViewController.self))
-                let image = self.capture()
+                let image = capture
                 feedbackVC.image = image
                 feedbackVC.reportType = reportType
                 feedbackVC.callingViewController = viewController

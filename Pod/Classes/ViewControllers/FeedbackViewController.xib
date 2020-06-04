@@ -58,7 +58,7 @@
                                 <constraint firstAttribute="height" constant="0.5" id="Ar0-7B-cJ3"/>
                             </constraints>
                         </view>
-                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-el-Zrw">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q7F-el-Zrw">
                             <rect key="frame" x="24" y="683.5" width="106" height="30"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEs-rU-stF">
