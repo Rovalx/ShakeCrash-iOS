@@ -7,6 +7,11 @@ public final class ShakeCrash {
     public struct Config {
         let url: URL
         let headers: [String: String]
+        
+        public init(url: URL, headers: [String: String]) {
+            self.url = url
+            self.headers = headers
+        }
     }
 
     internal static var appKey: String!
