@@ -20,28 +20,24 @@ extension UIViewController {
         let alert = UIAlertController(title: "What would you like to do?", message: nil, preferredStyle: .actionSheet)
         
         func present(reportType: Report.FeedbackType) {
-            alert.dismiss(animated: true) { [weak self] in
-                guard let self = self else { return }
-                
-                let navVC = UINavigationController()
-                navVC.navigationBar.barTintColor = .white
-                
-                // Create feedback view controller
-                let feedbackVC = FeedbackViewController(
-                    nibName: "FeedbackViewController",
-                    bundle: Bundle(for: FeedbackViewController.self))
-                let image = capture
-                feedbackVC.image = image
-                feedbackVC.reportType = reportType
-                feedbackVC.callingViewController = viewController
-                feedbackVC.viewControllerName = "\(type(of: self))"
-                
-                navVC.viewControllers = [feedbackVC, ]
-                navVC.modalPresentationStyle = .fullScreen
-                
-                // Present feedback view controller
-                viewController?.present(navVC, animated: true, completion: nil)
-            }
+            let navVC = UINavigationController()
+            navVC.navigationBar.barTintColor = .white
+            
+            // Create feedback view controller
+            let feedbackVC = FeedbackViewController(
+                nibName: "FeedbackViewController",
+                bundle: Bundle(for: FeedbackViewController.self))
+            let image = capture
+            feedbackVC.image = image
+            feedbackVC.reportType = reportType
+            feedbackVC.callingViewController = viewController
+            feedbackVC.viewControllerName = "\(type(of: self))"
+            
+            navVC.viewControllers = [feedbackVC, ]
+            navVC.modalPresentationStyle = .fullScreen
+            
+            // Present feedback view controller
+            viewController?.present(navVC, animated: true, completion: nil)
         }
         
         alert.addAction(UIAlertAction(title: "Report a problem", style: .default, handler: { (alert) in
@@ -81,8 +77,9 @@ extension UIViewController {
 
 		UIGraphicsBeginImageContextWithOptions(
             masterView.frame.size, masterView.isOpaque, scale)
-        masterView.drawHierarchy(
-            in: masterView.bounds, afterScreenUpdates: true)
+        for window in UIApplication.shared.windows {
+            window.drawHierarchy(in: masterView.bounds, afterScreenUpdates: true)
+        }
 		let image = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
 

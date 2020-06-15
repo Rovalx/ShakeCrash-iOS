@@ -21,12 +21,9 @@
 		36C7CE1F2487EAF400A766D9 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE1E2487EAF400A766D9 /* BundleExtensions.swift */; };
 		36C7CE212487FCE300A766D9 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7CE202487FCE300A766D9 /* URLSessionExtensions.swift */; };
 		37A0D058D0B76C88DDF4F2EEB835476E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		61F06E00410877D33819888FA7C5A05D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		635065A9F652E57C31C9587D8980B8B6 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A47ECDD17C87ED7D2F656CEF13830A /* PlaceholderTextView.swift */; };
-		74DBB22DEB5EC496A8F4D720D513D636 /* Pods-ShakeCrash_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB75F4F31A9F62C728E6F489DB0DCFF /* Pods-ShakeCrash_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C018D35B190DFCB4A3C9467F31E197B /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09299BDE18DDB5EFC7437143669F526C /* Swiftly.swift */; };
-		918BC61B282E618F316CE93264718FDE /* Pods-ShakeCrash_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2EFA97373B1DBD7996017E69AA4556 /* Pods-ShakeCrash_Tests-dummy.m */; };
 		B19CD27412720D32C86B6C7B4A7F72FB /* DrawableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */; };
 		B5846D842E891FF31B22D8A328489F19 /* ShakeCrash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6011C7DD1E3E3BFD5268B566AA4AEEA /* ShakeCrash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B92BB256B6799B20CF4DC6EC4760315F /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */; };
@@ -50,13 +47,6 @@
 			remoteGlobalIDString = 91DF0558ECEDD3C7E534A59CCB2A254A;
 			remoteInfo = ShakeCrash;
 		};
-		B4E0CC2741C49C0C297B63D793AF0C59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91DF0558ECEDD3C7E534A59CCB2A254A;
-			remoteInfo = ShakeCrash;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -66,11 +56,9 @@
 		27CE38A30151C6C3AE4CD0CADAA34010 /* Pods-ShakeCrash_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShakeCrash_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2A32364DEDA28CE8BDED3068152A99A8 /* ShakeCrash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShakeCrash-dummy.m"; sourceTree = "<group>"; };
 		2D6A5A5E4623E0EAB723DBDC0D71317D /* ShakeCrash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ShakeCrash.modulemap; sourceTree = "<group>"; };
-		3677F62A24855CBD0088F704 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3677F636248591A60088F704 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		36C7CDFE2485A45600A766D9 /* FeedbackTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextViewController.swift; sourceTree = "<group>"; };
 		36C7CDFF2485A45600A766D9 /* FeedbackTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackTextViewController.xib; sourceTree = "<group>"; };
-		36C7CE032485A98B00A766D9 /* ShakeCrash.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShakeCrash.podspec; sourceTree = "<group>"; };
 		36C7CE052485AE0000A766D9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		36C7CE142486DC9200A766D9 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		36C7CE1B2487EAC300A766D9 /* DeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtensions.swift; sourceTree = "<group>"; };
@@ -90,7 +78,6 @@
 		7742DD94A7B4C522AA9E3622E399034E /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		7799FEE854136CD897B3C7D25056B66F /* Reporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		889BDD7C90D17C87CE6C254A3958C9E2 /* Pods-ShakeCrash_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShakeCrash_Example-dummy.m"; sourceTree = "<group>"; };
-		9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeCrash_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		930BBC3708103E0B815FD536742DD99F /* DrawableImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawableImage.swift; sourceTree = "<group>"; };
 		93CB950B1360AD349CF081AFF225B0FD /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		98A0FF0ECBDED63D3F2FBC132BED8983 /* Pods-ShakeCrash_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShakeCrash_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -113,14 +100,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B0CFC75BFD23117FD1C9D6CCF37FE4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				442FCAAB2BA9520B7B4EF978C07ED7DA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3130F9B3F77F9A9EDE3D467F259DAEAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,8 +204,6 @@
 		4185FA9C28C81BCC2B989149D81760E4 /* ShakeCrash */ = {
 			isa = PBXGroup;
 			children = (
-				36C7CE032485A98B00A766D9 /* ShakeCrash.podspec */,
-				3677F62A24855CBD0088F704 /* README.md */,
 				43796F2234A28D3C1F4804479661C49C /* Pod */,
 				35C3DCFE171700BC25FB77337D2DCE42 /* Support Files */,
 			);
@@ -262,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				C8575530FD7387A1E67F3638F43CD1BC /* Pods_ShakeCrash_Example.framework */,
-				9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */,
 				BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */,
 				535EF85297E06C82A2BB036D394B2BB1 /* ShakeCrash.framework */,
 			);
@@ -354,14 +330,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F46C4C1C7A4D5F97C231AA5AF731D6AD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74DBB22DEB5EC496A8F4D720D513D636 /* Pods-ShakeCrash_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -381,24 +349,6 @@
 			productName = "ShakeCrash-ShakeCrash";
 			productReference = BBDAF00A7EA5ACF6EB55EB9AD78C0DEF /* ShakeCrash.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		4DFE9E75F652197FE851D09513A882F1 /* Pods-ShakeCrash_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D49439A0A7ED626DFEAC838FDA25E56 /* Build configuration list for PBXNativeTarget "Pods-ShakeCrash_Tests" */;
-			buildPhases = (
-				A88EB177375DE1E2337A82145E897D6F /* Sources */,
-				1B0CFC75BFD23117FD1C9D6CCF37FE4A /* Frameworks */,
-				F46C4C1C7A4D5F97C231AA5AF731D6AD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				87324087607BE6C775F4A0A2EF085F20 /* PBXTargetDependency */,
-			);
-			name = "Pods-ShakeCrash_Tests";
-			productName = "Pods-ShakeCrash_Tests";
-			productReference = 9156685C0A3C4A54DC0991F38EE1B86F /* Pods_ShakeCrash_Tests.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */ = {
 			isa = PBXNativeTarget;
@@ -444,7 +394,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1150;
 				TargetAttributes = {
 					B74925D388A9077D27A328BDADBC3B73 = {
 						LastSwiftMigration = 1150;
@@ -465,7 +415,6 @@
 			projectRoot = "";
 			targets = (
 				B74925D388A9077D27A328BDADBC3B73 /* Pods-ShakeCrash_Example */,
-				4DFE9E75F652197FE851D09513A882F1 /* Pods-ShakeCrash_Tests */,
 				91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */,
 				0BC8E9436DB6986F59338A398265EB3E /* ShakeCrash-ShakeCrash */,
 			);
@@ -503,14 +452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9878A24CB589A38FFED95EE121E4F44 /* Pods-ShakeCrash_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A88EB177375DE1E2337A82145E897D6F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				918BC61B282E618F316CE93264718FDE /* Pods-ShakeCrash_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,12 +493,6 @@
 			name = ShakeCrash;
 			target = 91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */;
 			targetProxy = 49A53E9E191B089C30E53C63B1725A48 /* PBXContainerItemProxy */;
-		};
-		87324087607BE6C775F4A0A2EF085F20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ShakeCrash;
-			target = 91DF0558ECEDD3C7E534A59CCB2A254A /* ShakeCrash */;
-			targetProxy = B4E0CC2741C49C0C297B63D793AF0C59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,39 +573,6 @@
 			};
 			name = Debug;
 		};
-		4573676F1EB1E456FF9749775CAB5F37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC26315D557131959F9D93318FFB03E8 /* Pods-ShakeCrash_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Pods-ShakeCrash_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ShakeCrash_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		6B3A3862820D5E1636F18E3DFC0695AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9069278ADE5CA1A78AD1899F41AB2AD /* ShakeCrash.xcconfig */;
@@ -744,38 +646,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		967436E166E107CD3FECE5828F03E376 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5D307192E39FE842B2C4C5497EC731E /* Pods-ShakeCrash_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ShakeCrash_Tests/Pods-ShakeCrash_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ShakeCrash_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -890,15 +760,6 @@
 			buildConfigurations = (
 				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
 				FB45FFD90572718D82AB9092B750F0CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4D49439A0A7ED626DFEAC838FDA25E56 /* Build configuration list for PBXNativeTarget "Pods-ShakeCrash_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4573676F1EB1E456FF9749775CAB5F37 /* Debug */,
-				967436E166E107CD3FECE5828F03E376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

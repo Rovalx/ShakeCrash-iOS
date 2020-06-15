@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ShakeCrash"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "ShakeCrash idea was taken from Google Maps, just shake your iPhone to submit screenshot with description via e-mail or Redmine!"
 
   s.description      = <<-DESC
