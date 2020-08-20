@@ -128,7 +128,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Xk7-0q-CPg" secondAttribute="trailing" id="1hE-kf-Epz"/>
                         <constraint firstItem="tRe-6U-057" firstAttribute="leading" secondItem="Wrw-mZ-nOo" secondAttribute="leading" constant="24" id="2pw-AK-HRh"/>
@@ -146,7 +146,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Wrw-mZ-nOo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1hH-K3-eFb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wrw-mZ-nOo" secondAttribute="trailing" id="lzm-Yx-wSH"/>

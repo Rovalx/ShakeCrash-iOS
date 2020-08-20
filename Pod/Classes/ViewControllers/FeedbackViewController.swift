@@ -3,6 +3,10 @@ import MessageUI
 
 internal final class FeedbackViewController: UIViewController, FeedbackTextDelegate {
 
+    private enum Config {
+        static let kPromptString = "Place your description here..."
+    }
+    
     // MARK: Outlets
     
 	@IBOutlet weak var blueButton: UIButton!
@@ -50,6 +54,8 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
         )
         descriptionTextView.isUserInteractionEnabled = true
         descriptionTextView.addGestureRecognizer(tapGesture)
+        
+        descriptionTextView.text = Config.kPromptString
 	}
 
 	// MARK: Actions
@@ -152,7 +158,11 @@ internal final class FeedbackViewController: UIViewController, FeedbackTextDeleg
     
     func didChangeText(_ text: String) {
         descriptionTextView.textColor = text.isEmpty ? .lightGray : .black
-        descriptionTextView.text = text
+        if text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty {
+            descriptionTextView.text = Config.kPromptString
+        } else {
+            descriptionTextView.text = text
+        }
     }
     
 }
